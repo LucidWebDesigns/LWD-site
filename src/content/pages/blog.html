@@ -10,7 +10,8 @@ layout: "layouts/base.html"
 
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/page/blog.css">
+    <link rel="stylesheet" href="/assets/css/page/index.css" />
 {% endblock %}
 
 {% block body %}
@@ -36,9 +37,7 @@ layout: "layouts/base.html"
             {% else %}
             <ul role="list" class="articles__list flow">
             {%- for post in collections.post | reverse -%} 
-
-            {%- endfor %}
-                <li>
+                 <li>
                     <article class="snippet">
                         <img
                         src="{{ post.data.image }}"
@@ -55,6 +54,8 @@ layout: "layouts/base.html"
                         <a href="{{ post.url }}" class="cs-button-solid">READ MORE</a>
                     </article>
                 </li>
+            {%- endfor %}
+               
             {% endif %}
             </ul>
         </div>

@@ -1,4 +1,7 @@
-{% extends "layouts/base.html" %}
+---
+title: 'Post | Lucid Web Designs'
+layout: "layouts/base.html"
+---
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/blog.css">
@@ -8,19 +11,18 @@
     <!-- ============================================ -->
     <!--                    LANDING                   -->
     <!-- ============================================ -->
-
-    <section id="int-hero">
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
+        <div class="fixed-bg-container">
+    <div class="bg-overlay">
+        <div class="fixed-background"></div>
+    </div>
+    </div>
+    <h1 class="page-header-title">Blog</h1>
 
     <!-- ============================================ -->
     <!--              Main Blog Content               -->
     <!-- ============================================ -->
-
+ <section class="top-section white-bg">
+        <div class="content pt-md pb-lg">
     <div class="blog-container main-content-wrapper">
         <!--Main content -->
         <div class="main-content">
@@ -62,4 +64,6 @@
 
         {% include 'components/featured-post.html' %}
     </div>
+     </div>
+    </section>
 {% endblock %}

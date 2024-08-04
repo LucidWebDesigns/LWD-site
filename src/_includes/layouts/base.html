@@ -199,7 +199,7 @@
         {% include "components/header.html" %}
 
         <main id="main">
-            {% block body %}{% endblock %}
+            {{ content | safe }}
         </main>
         {% include "components/footer.html" %}
   </body>
