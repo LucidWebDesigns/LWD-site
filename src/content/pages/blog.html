@@ -1,7 +1,6 @@
 ---
-title: 'Blog | Code Stitch Web Designs'
+title: 'Blog | Lucid Web Designs'
 description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'blog/'
 eleventyNavigation:
     key: Blog
@@ -19,32 +18,61 @@ eleventyNavigation:
     <!--                    LANDING                   -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Blog</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
+    <div class="fixed-bg-container">
+    <div class="bg-overlay">
+        <div class="fixed-background"></div>
+    </div>
+    </div>
+    <h1 class="page-header-title">Blog</h1>
 
     <!-- ============================================ -->
     <!--              Main Blog Content               -->
     <!-- ============================================ -->
 
+    <section class="top-section white-bg">
+        <div class="content pt-md pb-lg">
+            {% if collections.post | length == 0 %}
+                <h1>No Recent Posts</h1>
+            {% else %}
+            <ul role="list" class="articles__list flow">
+            {%- for post in collections.post | reverse -%} 
+
+            {%- endfor %}
+                <li>
+                    <article class="snippet">
+                        <img
+                        src="{{ post.data.image }}"
+                        alt="{{ post.data.imageAlt }}"
+                        class="snippet__image"
+                        />
+                        <h3 class="snippet__title">
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                        </h3>
+                        <p class="snippet__body">
+                        {{ post.data.description }}
+                        </p>
+                        <!-- <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('{{ post.data.title }}', event)">READ MORE</a> -->
+                        <a href="{{ post.url }}" class="cs-button-solid">READ MORE</a>
+                    </article>
+                </li>
+            {% endif %}
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+<!-- #################################################### -->
+<!-- 
     <div class="blog-container main-content-wrapper">
-        <!--Main content -->
+
         <div class="main-content">
-            <!-- ============================================ -->
-            <!--                 Blog Articles                -->
-            <!-- ============================================ -->
 
             {% if collections.post | length == 0 %}
                 <h1>No Recent Posts</h1>
             {% else %}
                 {%- for post in collections.post | reverse -%}
                     <article class="recent-articles">
-                        <!--Main Article Image-->
+
                         <picture class="blog-mainImage">
                             <img
                             src="{{ post.data.image }}"
@@ -53,10 +81,10 @@ eleventyNavigation:
                             height="400"
                             decoding="async"/>
                         </picture>
-                        <!--Article Info-->
+
                         <div class="article-group">
                             <div class="blog-authorGroup">
-                                <!--Author Image-->
+
                                 <picture class="blog-author-img">
                                     <img
                                     src="/assets/svgs/profile.svg"
@@ -67,7 +95,7 @@ eleventyNavigation:
                                 </picture>
                                 <span class="blog-author">{{ post.data.author }}</span>
                                 <span aria-hidden="true" class="blog-dot"></span>
-                                <!--Blog Date-->
+
                                 <span class="blog-date">{{ post.date | postDate }}</span>
                             </div>
                             <h2 class="blog-h1">
@@ -85,4 +113,4 @@ eleventyNavigation:
 
         {% include 'components/featured-post.html' %}
     </div>
-{% endblock %}
+{% endblock %} -->

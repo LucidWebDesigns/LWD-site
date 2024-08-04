@@ -1,18 +1,16 @@
 ---
 title: 'Contact | Code Stitch Web Designs'
 description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'contact/'
 eleventyNavigation:
     key: Contact Us
     order: 600
-    hideOnDesktop: true
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="stylesheet" href="/assets/css/section/contact.css" />
 {% endblock %}
 
 {% block body %}
@@ -21,79 +19,113 @@ eleventyNavigation:
     <!--                    LANDING                   -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
+    <div class="fixed-bg-container">
+        <div class="bg-overlay">
+            <div class="fixed-background"></div>
+        </div>
+    </div>
+    <h1 class="page-header-title">Contact</h1>
 
     <!-- ============================================ -->
     <!--                Contact Form                  -->
     <!-- ============================================ -->
 
-    <section id="cs-contact">
-        <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
-                </label>
-                <label>
-                    Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
-                </label>
-                <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br/>
-                    {{client.address.lineTwo}},
-                    <br/>
-                    <span class="cs-block">
-                        {{client.address.city}}
-                        {{client.address.state}}
-                        {{client.address.zip}}
-                    </span>
-                </a>
-
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
-                </picture>
-
+    <<section class="gradient top-section">
+  <div class="bg-curve-white-bottom">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"
+      ></path>
+    </svg>
+  </div>
+  <div class="content pb-md pt-lg">
+    <div id="contact">
+      <div id="fixed-image"></div>
+      <div class="cs-container">
+        <!--Contact Info-->
+        <div class="cs-info-group dark-text">
+          <div class="cs-info">
+            <div class="cs-info-subgroup">
+              <hr />
+              <div>
+                <h3>Phone:</h3>
+                <p>+1 512 645 9719</p>
+              </div>
             </div>
+            <div class="cs-info-subgroup">
+              <hr />
+              <div>
+                <h3>Email:</h3>
+                <p>toby.webhelp@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+        <div class="cs-form-group">
+          <div class="cs-content">
+            <h2 class="cs-title">Contact Us</h2>
+          </div>
+          <!--Form-->
+          <form
+            class="cs-form"
+            id="cs-form-1750"
+            name="Contact Form"
+            method="post"
+            onsubmit="sendEmail(event)"
+          >
+            <label class="cs-label">
+              <input
+                class="cs-input"
+                required
+                type="text"
+                id="name-1750"
+                name="name"
+                placeholder="Your Name"
+              />
+            </label>
+            <label class="cs-label cs-email">
+              <input
+                class="cs-input"
+                required
+                type="email"
+                id="email-1750"
+                name="email"
+                placeholder="Your Email Address"
+              />
+            </label>
+            <label class="cs-label cs-phone">
+              <input
+                class="cs-input"
+                required
+                type="phone"
+                id="phone-1750"
+                name="phone"
+                placeholder="Your Phone Number"
+              />
+            </label>
+            <label class="cs-label">
+              <textarea
+                class="cs-input cs-textarea"
+                required
+                name="message"
+                id="message-1750"
+                placeholder="Type your Message Here..."
+              ></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
