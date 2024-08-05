@@ -20,6 +20,7 @@
   font-weight: var(--fw-700);
   border: 2px solid var(--clr-primary-400);
 }
+
 .btn--primary:hover,
 .btn--primary:focus {
   background: var(--clr-primary-500);
@@ -38,81 +39,47 @@
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
 }
-.articles__list li {
-  min-width: 300px;
-}
-@media (max-width: 1068px) {
-  .articles__list {
-    flex-direction: column;
-  }
- 
-@media (min-width: 1069px) {
-  .articles__list {
-    flex-direction: row;
-  }
-}
-}
+
 .articles__list {
   display: flex;
-  flex-wrap:wrap;
-  --flow-spacer: 3rem;
+  flex-wrap: wrap;
   gap: 2em;
-  /* margin: 1rem; */
-  max-width: 100vw;
-  align-items: center;
-  justify-content: center;
+  max-width: 1200px; /* Restrict max width for better alignment */
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
-/* //////////////////////
-  Individual article page
-  /////////////////////// */
-
-/* .main-article {
-  margin-bottom: 3rem;
+.articles__list li {
+  list-style: none;
+  flex: 1 1 300px; /* Allow flex items to grow, shrink, and have a base width */
+  margin: 1em;
 }
-
-.main-article__figure figcaption {
-  margin: 1rem 0;
-  font-size: var(--fs-300);
-  opacity: 0.9;
-} */
-
-/* //////////////////////
-  Article snippets
-  /////////////////////// */
 
 .snippet {
   display: flex;
   flex-direction: column;
   gap: 1em;
   box-shadow: var(--item-box-shadow);
-  padding: 3em 2em;
+  padding: 2em;
   border-radius: 5px;
-  max-width: clamp(10rem, 300px, 30rem);
+  background-color: var(--clr-neutral-100);
+  height: 100%; /* Ensure equal height for all snippets */
 }
 
 .snippet__body {
   overflow: hidden;
   display: -webkit-box;
-  /* Number of lines to show */
   -webkit-line-clamp: 3; 
   -webkit-box-orient: vertical;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .snippet__image {
   width: 100%;
-  max-height: clamp(10rem, 10vh, 20rem);
-  aspect-ratio: 4 / 3;
+  max-height: 200px;
   object-fit: cover;
-}
-.snippet__meta {
-  color: var(--clr-neutral-300);
-}
-
-.snippet__meta span {
-  color: var(--clr-neutral-900);
+  border-radius: 5px;
 }
 
 .snippet__title {
@@ -131,10 +98,11 @@
 }
 
 .snippet .cs-button-solid {
-  margin-left: 0;
   font-size: 0.8rem;
+  align-self: flex-start;
+  margin: auto auto;
 }
-/* typgraphy */
+
 .article-title {
   font-size: var(--fs-700);
 }
