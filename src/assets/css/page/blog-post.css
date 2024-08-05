@@ -91,8 +91,8 @@
 @media (min-width: 869px) {
     #blog-post-jumbotron {
         width: 100vw;
-        max-height: 50vh;
-        background-position-y: 150%;
+        /* max-height: 50vh; */
+        background-position-y: -250px;
         background-size: cover;
         background-repeat: no-repeat;
         /* background-position: center; */
@@ -130,9 +130,13 @@
         text-align: left;
         /* margin: auto; */
         /* align-items: center;; */
+        margin-right: 2em;
     }
-
+    .blog-article {
+        margin-right: 2em;
+    }
     .blog-article p,
+    .blog-article strong,
     .blog-article span,
     .blog-article strong,
     .blog-article h2,
@@ -144,7 +148,6 @@
     {
         text-align: left;
         max-width: 700px;
-        margin-right: 2em;
     }
 
 
