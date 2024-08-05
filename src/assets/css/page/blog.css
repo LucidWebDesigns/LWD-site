@@ -48,12 +48,14 @@
   margin: 0 auto;
   padding: 0;
   list-style: none;
+  justify-content: center; /* Center content when there's only one post */
 }
 
 .articles__list li {
   list-style: none;
   flex: 1 1 300px; /* Allow flex items to grow, shrink, and have a base width */
   margin: 1em;
+  max-width: 350px; /* Limit the maximum width of each post to prevent stretching */
 }
 
 .snippet {
@@ -80,11 +82,17 @@
   max-height: 200px;
   object-fit: cover;
   border-radius: 5px;
+  aspect-ratio: 16 / 9;
 }
 
 .snippet__title {
   color: black;
   font-size: 1.25rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 .snippet__title a {
@@ -100,8 +108,12 @@
 .snippet .cs-button-solid {
   font-size: 0.8rem;
   align-self: flex-start;
-  margin: auto auto;
+  line-height:1rem;
+  padding: 1em;
+  margin: auto 0;
+  margin-bottom: 0;
 }
+
 
 .article-title {
   font-size: var(--fs-700);
