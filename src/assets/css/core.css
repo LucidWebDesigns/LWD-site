@@ -524,9 +524,10 @@ a {
   } */
   .page-header-title {
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     letter-spacing: .3rem;
-    margin-top: 40%;
+    margin: auto; 
+    padding-top: 2em;
   }
 }
 
@@ -534,9 +535,10 @@ a {
 @media (min-width: 869px) {
   .page-header-title {
     text-align: center;
-    margin-top: 10%;
     font-size: 3.5em;
     letter-spacing: .3rem;;
+    margin: auto;
+    padding-top: 1em;
   }
   .page-header {
     padding: 2em 12vw;

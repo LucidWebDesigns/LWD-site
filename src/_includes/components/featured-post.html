@@ -8,7 +8,7 @@
 
     <div class="blog-sidebar-container ">
         {%- for post in collections.featured | reverse -%}
-        <div>
+        <div class="blog-feature-container">
             <a class="blog-feature" href="{{ post.url }}">
                 <picture class="blog-featureImage">
                     <img
@@ -16,15 +16,15 @@
                         alt="{{ post.data.imageAlt }}"
                         decoding="async">
                 </picture>
-                </a>
-                 <a href="{{ post.url }}"><h3 class="feature-h3">{{ post.data.title }}</h3></a>
-                <div class="content-group">
-            
-                   
-                    <span id="blog-page-author">{{ post.data.author }}</span>
-                    <!-- <span class="feature-date">{{ post.date | postDate }}</span> -->
-                </div>
-                </div>
+            </a>
+            <a href="{{ post.url }}"><h3 class="feature-h3">{{ post.data.title }}</h3></a>
+            <div class="content-group">
+        
+                
+                <span id="blog-page-author">{{ post.data.author }}</span>
+                <!-- <span class="feature-date">{{ post.date | postDate }}</span> -->
+            </div>
+        </div>
         {%- endfor -%}
     </div>
     <!--Add anything else in the sidebar below-->
