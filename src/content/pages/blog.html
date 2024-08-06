@@ -29,7 +29,8 @@ layout: "layouts/base.html"
     <!--              Main Blog Content               -->
     <!-- ============================================ -->
 
-    <section class="top-section white-bg">
+    <section class="top-section gradient">
+        <div class="blog-page-gradient-2">
     
         <div class="content pt-md pb-lg">
             {% if collections.post | length == 0 %}
@@ -56,6 +57,7 @@ layout: "layouts/base.html"
                     {%- endfor %}
                 </ul>
             {% endif %}
+        </div>
         </div>
     </section>
 {% endblock %}

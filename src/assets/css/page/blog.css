@@ -75,6 +75,7 @@
   -webkit-line-clamp: 3; 
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
+  color: black;
 }
 
 .snippet__image {
@@ -117,4 +118,8 @@
 
 .article-title {
   font-size: var(--fs-700);
+}
+.blog-page-gradient-2 {
+  background: rgb(2,0,36);
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 30%);
 }
