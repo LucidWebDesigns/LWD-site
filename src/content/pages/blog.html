@@ -2,6 +2,7 @@
 title: 'Blog | Lucid Web Designs'
 description: 'Meta description for the page'
 permalink: 'blog/'
+preloadImg: '/assets/images/womanbulb.png'
 eleventyNavigation:
     key: Blog
     order: 500
@@ -10,6 +11,7 @@ layout: "layouts/base.html"
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/page/blog.css">
+    <link rel="stylesheet" href="/assets/css/page/blog-post.css">
     <link rel="stylesheet" href="/assets/css/page/index.css" />
 {% endblock %}
 
@@ -23,32 +25,34 @@ layout: "layouts/base.html"
             <div class="fixed-background"></div>
         </div>
     </div>
-    <h1 class="page-header-title">Blog</h1>
+    <h1 class="page-header-title">BLOG</h1>
 
     <!-- ============================================ -->
     <!--              Main Blog Content               -->
     <!-- ============================================ -->
 
-    <section class="top-section gradient">
+    <section id="blog-page" class="top-section gradient">
         <div class="blog-page-gradient-2">
     
-        <div class="content pt-md pb-lg">
+        <div class="pt-md pb-lg">
             {% if collections.post | length == 0 %}
                 <h1>No Recent Posts</h1>
             {% else %}
-                <ul role="list" class="articles__list">
+            <div class="blog-split">
+                {% include 'components/featured-post.html' %}
+                <ul role="list" class="blog-page__list">
                     {%- for post in collections.post | reverse -%} 
                     <li>
-                        <article class="snippet">
+                        <article class="blog-page-snippet">
                             <img
                                 src="{{ post.data.image }}"
                                 alt="{{ post.data.imageAlt }}"
-                                class="snippet__image"
+                                class="blog-page-snippet__image"
                             />
-                            <h3 class="snippet__title">
-                                <a href="{{ post.url }}">{{ post.data.title }}</a>
-                            </h3>
-                            <p class="snippet__body">
+                            <h3 class="blog-page-snippet__title">{{ post.data.title }}</h3>
+                            <span id="blog-page-author">{{ post.data.author }}</span>
+                            <hr/>
+                            <p class="blog-page-snippet__body">
                                 {{ post.data.description }}
                             </p>
                             <a href="{{ post.url }}" class="cs-button-solid">READ MORE</a>
@@ -56,6 +60,7 @@ layout: "layouts/base.html"
                     </li>
                     {%- endfor %}
                 </ul>
+            </div>
             {% endif %}
         </div>
         </div>

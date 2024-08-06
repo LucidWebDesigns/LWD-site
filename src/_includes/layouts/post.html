@@ -1,5 +1,9 @@
 ---
-title: 'Post | Lucid Web Designs'
+eleventyComputed:
+    title: '{{ title }}'
+    description: '{{ description }}'
+    preloadImg: '{{ image }}'
+    permalink: '/blog/{{ title | slug }}/index.html'
 layout: "layouts/base.html"
 ---
 
@@ -20,7 +24,7 @@ layout: "layouts/base.html"
     <!--                    LANDING                   -->
     <!-- ============================================ -->
             <section id="blog-post-jumbotron">
-
+<div class="c">
 
                         <!--Article Info-->
             <!-- <div class="max-width-100"> -->
@@ -44,7 +48,7 @@ layout: "layouts/base.html"
                         </div>
                     </div>
                 <!-- </div> -->
-
+                 </div>
             </section>
     <!-- <div class="fixed-bg-container">
         <div class="bg-overlay">
