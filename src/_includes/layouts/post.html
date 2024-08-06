@@ -2,7 +2,7 @@
 eleventyComputed:
     title: '{{ title }}'
     description: '{{ description }}'
-    preloadImg: '{{ image }}'
+    preloadImg: {{ image }}
     permalink: '/blog/{{ title | slug }}/index.html'
 layout: "layouts/base.html"
 ---
@@ -24,7 +24,7 @@ layout: "layouts/base.html"
     <!--                    LANDING                   -->
     <!-- ============================================ -->
             <section id="blog-post-jumbotron">
-<div class="c">
+<div class="">
 
                         <!--Article Info-->
             <!-- <div class="max-width-100"> -->

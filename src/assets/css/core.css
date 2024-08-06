@@ -194,6 +194,10 @@ ul {
   text-align: left;
 }
 
+a {
+  text-decoration:none;
+}
+
 /* //////////////////////
   Utility Classes
   /////////////////////// */
@@ -268,7 +272,6 @@ ul {
   width: 100%;
 }
 .page-header-title {
-  position: absolute;
   color: white;
   z-index: 500;
   width: 100%;
@@ -516,15 +519,14 @@ ul {
     transition: 0.5s;
     transition-delay: 0.5s;
   }
-  .top-section {
+  /* .top-section {
     margin-top: 40vh;
-  }
+  } */
   .page-header-title {
     text-align: center;
-    position: absolute;
-    top: 25%;
     font-size: 3em;
-    letter-spacing: .3rem;;
+    letter-spacing: .3rem;
+    margin-top: 40%;
   }
 }
 
@@ -532,7 +534,7 @@ ul {
 @media (min-width: 869px) {
   .page-header-title {
     text-align: center;
-    margin-top: 30vh;
+    margin-top: 10%;
     font-size: 3.5em;
     letter-spacing: .3rem;;
   }
@@ -546,9 +548,9 @@ ul {
   .section {
     padding: min(10vh, 10em) 6vw;
   } */
-  .top-section {
+  /* .top-section {
     margin-top: 50vh;
-  }
+  } */
   .top-section-jumboless {
     padding-top: 0vh;
   }
@@ -800,43 +802,27 @@ font sizes, styles
     justify-content: center;
   }
   .bg-overlay {
-    position: fixed;
-    z-index: 50;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 0;
-    width: 100vw;
     background-image: var(--url-img-1);
-    background-position-y: var(--bg-pos-y-img-1-mobile);
-    background-size: var(--bg-size-img-1-mobile);
-    min-height: var(--min-vh-img-1-mobile);
-    max-height: var(--min-vh-img-1-mobile);
-  }
-  .fixed-background {
-    position: fixed;
-    opacity: var(--img-1-opc);
-    background-color: var(--bg-color);
-    min-height: 100vh;
-    min-width: 100vw;
-    max-height: 100vh;
-    max-width: 100vw;
-  }
-  .fixed-bg-container {
-    position: fixed;
-    min-height: 100vh;
-    min-width: 100vw;
-    max-height: 100vh;
-    max-width: 100vw;
+    width: 100vw;
+    /* max-height: 50vh; */
+    background-position-y: -150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-attachment: scroll;
+    background-blend-mode: darken;
+    background-color:  rgba(15, 88, 133, .65);
+    display:flex;
+    justify-content: center;
+    padding: 2.5em 0 .5em 0;
+    height: 40vh;
   }
 }
 @media only screen and (min-width: 48rem) {
   .bg-overlay {
-    position: fixed;
-    background-position-y: var(--bg-pos-y-img-1-big);
-    background-size: var(--bg-size-img-1-big);
-    background-repeat: no-repeat;
-    min-height: var(--min-vh-img-1-big);
-    max-height: var(--min-vh-img-1-big);
+    background-attachment: fixed;
+    height: 45vh;
+    background-position-y: 60%;
   }
 }
 
