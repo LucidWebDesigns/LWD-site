@@ -112,6 +112,13 @@
         padding-bottom: 1em;
         width: 100%;
     }
+     #blog-post-body{
+        -webkit-box-shadow: 13px 13px 44px #dbdbdb, -13px -13px 44px #ffffff;
+box-shadow: 13px 13px 44px #dbdbdb, -13px -13px 44px #ffffff;
+
+        padding: 2em;
+        border-radius: 50px;
+     }
     #blog-post-body h2 {
         font-size: 1.5rem;
         padding: 2em 0 .25em 0;
