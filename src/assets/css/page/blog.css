@@ -172,6 +172,13 @@
     gap: 7.5em;
     margin-top: 1em;
   }
+    #blog-page .blog-sidebar .blog-header {
+    color: white;
+    text-align: center;
+  }
+  #blog-post .blog-sidebar .blog-header {
+    text-align: center;
+  }  
 }
 @media (min-width: 869px) {
   #blog-page .blog-page-snippet {
@@ -250,6 +257,7 @@
 }
 .feature-h3 {
   padding-top: .5em;
+  font-weight: 600;
 }
 .feature-h3:hover {
   color: rgba(0,0,0,.5);
