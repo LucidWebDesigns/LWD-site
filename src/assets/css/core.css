@@ -17,6 +17,10 @@
   --primary: rgb(66, 183, 255);
   --placeholderColor: #1a1a1a;
   --bodyTextColor: #686868;
+  --neomorph: 10px 10px 25px rgba(0,0,0,.2), -10px -10px 25px rgba(255,255,255,.1);
+  --neomorph-btn: 2px 2px 5px rgba(0,0,0,.5), -2px -2px 5px rgba(255,255,255,.25);
+  --yellow-gradient:background: rgb(255,252,208);
+background: linear-gradient(90deg, rgba(255,252,208,1) 0%, rgba(255,251,224,1) 15%, rgba(255,255,242,1) 86%);
 
   /*################################# code stitch #################################*/
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
@@ -347,13 +351,15 @@ a {
   color: #fff;
   min-width: 5.375rem;
   padding: 0 1.5rem;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: rgba(66, 183, 255, 1);
   border-radius: 0.25rem;
   display: inline-block;
   position: relative;
   z-index: 1;
   /* prevents padding from adding to the width */
   box-sizing: border-box;
+  box-shadow: var(--neomorph-btn)
 }
 .cs-button-solid:before,
 .cs-button-solid:before {
@@ -706,7 +712,7 @@ background-color,
 .white-bg {
   /* color: black; */
   color: var(--bodyTextColor);
-  background-color: white;
+  background-color: var(--yellow-gradient);
   z-index: 40;
   min-width: 100vw;
   position: relative;

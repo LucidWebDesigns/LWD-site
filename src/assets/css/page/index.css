@@ -42,19 +42,41 @@
 .hero__content p {
   padding: 1em 0;
 }
+svg {
+  z-index:-20;
+}
 @media (max-width: 868px) {
-  .hero__image {
+  .jumbo-hero__image {
     width: 60%;
     /* max-height: max(15rem, 40vh); */
     object-fit: cover;
     margin: auto;
   }
+  .hero__image {
+    width: 60%;
+    /* max-height: max(15rem, 40vh); */
+    object-fit: cover;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: var(--neomorph);
+    border: 1px solid rgba(0,0,0,.1);
+  }
 }
 @media (min-width: 869px) {
+  .jumbo-hero__image {
+    width: 93%;
+    /* max-height: max(15rem, 40vh); */
+    object-fit: cover;
+    margin-top: 5em;
+  }
   .hero__image {
     width: 93%;
     /* max-height: max(15rem, 40vh); */
     object-fit: cover;
     margin-top: 5em;
+    border-radius: 50%;
+    width: 320px;
+    box-shadow: var(--neomorph);
+    border: 1px solid rgba(0,0,0,.1);
   }
 }

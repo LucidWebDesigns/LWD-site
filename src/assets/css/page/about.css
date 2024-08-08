@@ -1,7 +1,10 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #about-hero-image {
-    width: 220px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: var(--neomorph);
+    border: 1px solid rgba(0,0,0,.1);
   }
   .cs-info {
     color: black;
@@ -10,7 +13,11 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #about-hero-image {
-    width: 420px;
+    border-radius: 50%;
+    width: 320px;
+    box-shadow: var(--neomorph);
+    border: 1px solid rgba(0,0,0,.1);
+    margin-top: 3em;
   }
 }
 
