@@ -75,19 +75,19 @@
   #pricing .cs-item {
     width: 100%;
     padding: clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
-    background-color: #ffffff;
+    background-color: rgba(255,255,255,1);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border: 2px solid rgba(222, 242, 255, 0.75);
-    border-radius: 5px;
+    border-radius: 15px;
     max-width: 300px;
     margin: 1.5rem 0;
+    box-shadow: var(--neomorph);
   }
   #pricing .cs-item.cs-popular {
-    box-shadow: var(--item-box-shadow);
+    box-shadow: var(--neomorph);
     z-index: 1;
     font-size: 1.1em;
   }

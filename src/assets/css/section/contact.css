@@ -26,12 +26,12 @@
     align-items: stretch;
     /* 48px - 64px */
     gap: clamp(3rem, 5vw, 4rem);
-    padding: 2.5em;
+    padding: 1.5em;
   }
 
   .cs-form-group {
     background-color: #fff;
-    padding: 3em;
+    padding: 1em;
     box-shadow: var(--neomorph);
     border-radius: 20px;
 
