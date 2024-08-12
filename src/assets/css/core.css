@@ -16,11 +16,16 @@
     1px -5px 15px rgba(66, 183, 255, 0.35);
   --primary: rgb(66, 183, 255);
   --placeholderColor: #1a1a1a;
-  --bodyTextColor: #686868;
-  --neomorph: 10px 10px 25px rgba(0,0,0,.2), -10px -10px 25px rgba(255,255,255,.1);
+  --bodyTextColor: #4d4d4d;
+  --titleTextColor: #2f2f2f;
+  /* --neomorph: 10px 10px 15px rgba(0,0,0,.3), -3px -3px 3px rgba(255,255,255,.5), inset -5px -5px 5px rgba(0,0,0,.2),inset  5px 5px 5px rgba(255,255,255,1); */
+  --neomorph: 6px 6px 9px rgba(0,0,0,.2), -6px -6px 9px rgba(255,255,255,.2);
+  /* --neomorph-pastel: 10px 10px 15px rgb(87, 165, 150), -10px -10px 25px rgb(221, 251, 245), inset -5px -5px 5px rgb(87, 165, 150),inset  5px 5px 5px rgb(221, 251, 245); */
   --neomorph-btn: 2px 2px 5px rgba(0,0,0,.5), -2px -2px 5px rgba(255,255,255,.25);
-  --yellow-gradient:background: rgb(255,252,208);
-background: linear-gradient(90deg, rgba(255,252,208,1) 0%, rgba(255,251,224,1) 15%, rgba(255,255,242,1) 86%);
+  /* --yellow-gradient:background: rgb(255,252,208);
+background: linear-gradient(90deg, rgba(255,252,248,1) 0%, rgba(255,251,244,1) 15%, rgba(225,225,212,1) 86%); */
+  --light-blue-bg: #dfecf4;
+  --pastel-green-bg: rgb(209, 223, 196);
 
   /*################################# code stitch #################################*/
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
@@ -104,6 +109,7 @@ figure,
 blockquote,
 dl,
 dd {
+  padding: 0;
   margin: 0;
 }
 
@@ -114,7 +120,6 @@ ol:where([role="list"]) {
   margin: 0;
   padding: 0;
 }
-
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -402,12 +407,7 @@ a {
   /* ******************************* */
   /* ******************************* */
   /* ******************************* */
-
-  /* section,
-  .section {
-    padding: min(10vh, 10em) 0.5em;
-  } */
-
+ 
   .top-section-jumboless {
     padding-top: 12.5vh;
   }
@@ -666,7 +666,7 @@ ul {
 }
 
 .cs-title {
-  color: black;
+  color: var(--titleTextColor);
   font-size: var(--headerFontSize);
   font-weight: 900;
   line-height: 1.2em;
@@ -688,7 +688,7 @@ ul {
 }
 
 .text-title-dark {
-  color: black;
+  color: var(--titleTextColor);
 }
 
 .cs-text {
@@ -710,21 +710,26 @@ background-color,
   color: white;
   position: relative;
   background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(1, 60, 132, 1) 0%,
-    rgba(0, 149, 255, 1) 100%
+    270deg,
+    rgba(2, 0, 36, .1) 0%,
+    rgba(1, 60, 132, .8) 0%,
+    rgba(50, 129, 235, 1) 100%
   );
   z-index: 40;
   min-width: 100vw;
 }
+.blog-bg-color {
+  background-color: var(--pastel-green-bg);
+}
 .white-bg {
-  /* color: black; */
+  /* color: var(--titleTextColor); */
   color: var(--bodyTextColor);
-  background-color: var(--yellow-gradient);
+  /* background-color: var(--yellow-gradient); */
+  background-color: var(--light-blue-bg);
   z-index: 40;
   min-width: 100vw;
   position: relative;
+
 }
 /* content styles */
 /* 

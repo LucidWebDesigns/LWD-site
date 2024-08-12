@@ -5,7 +5,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   .cs-info {
-    color: black;
+    color: var(--titleTextColor);
   }
 
   #contact {
@@ -44,6 +44,10 @@
   }
   #contact .cs-info-subgroup {
     display: inline-flex;
+    box-shadow: var(--neomorph);
+    padding: 1em;
+    border-radius: 20px;
+    background: white;
   }
   #contact .cs-info-subgroup hr {
     padding: 0;
@@ -79,7 +83,7 @@
   }
   #contact .cs-title {
     margin: 0 0 1.5rem;
-    color: black;
+    color: var(--titleTextColor);
   }
   #contact .cs-form {
     width: 100%;

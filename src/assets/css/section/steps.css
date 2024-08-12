@@ -40,18 +40,21 @@
     justify-items: center;
     align-items: stretch;
     grid-auto-flow: row;
+    gap: 2em;
   }
   #steps .cs-item {
     list-style: none;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
-    padding: 1.5rem;
+    padding: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
     width: 100%;
+    background: white;
     /* bottom border */
+    box-shadow: var(--neomorph);
   }
   #steps .cs-item::after {
     content: "";
@@ -70,15 +73,7 @@
     bottom: 0;
     left: 0;
   }
-  #steps .cs-item:first-of-type {
-    padding-top: 0;
-  }
-  #steps .cs-item:last-of-type {
-    padding-bottom: 0;
-  }
-  #steps .cs-item:last-of-type::after {
-    content: none;
-  }
+
   #steps .cs-number {
     /* 80px - 100px */
     font-size: clamp(5rem, 1vw, 6.25rem);
@@ -112,7 +107,7 @@
   }
   #steps .cs-card-group {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+    gap: 2em;
   }
   #steps .cs-item {
     /* 24px - 60px */

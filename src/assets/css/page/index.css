@@ -56,9 +56,9 @@ svg {
     width: 60%;
     /* max-height: max(15rem, 40vh); */
     object-fit: cover;
-    margin: auto;
+    margin: mar;
     border-radius: 50%;
-    box-shadow: var(--neomorph);
+    /* box-shadow: var(--neomorph); */
     border: 1px solid rgba(0,0,0,.1);
   }
 }
@@ -76,7 +76,20 @@ svg {
     margin-top: 5em;
     border-radius: 50%;
     width: 320px;
-    box-shadow: var(--neomorph);
-    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: inset  var(--neomorph);
+    /* border: 1px solid rgba(0,0,0,.1); */
+    padding: 1.5em;
+  }
+  div:has(.hero__image) {
+    padding: 2em;
   }
 }
+.jumbo-hero-index-container {
+  background: rgb(255,252,208);
+  background: radial-gradient(circle, rgba(255,252,208,1) 25%, rgba(255,251,224,2) 15%, rgba(255,255,242,.01) 66%);
+  border-radius: 100%;
+  z-index: 10;
+}
+
+
+

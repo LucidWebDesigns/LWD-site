@@ -29,6 +29,10 @@
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
+    background-color: white;
+    box-shadow: var(--neomorph);
+    padding: 2em;
+    border-radius: 15px;
   }
   #side-by-side .cs-text {
     margin-bottom: 1rem;
@@ -148,13 +152,15 @@
     justify-content: space-between;
     align-items: stretch;
     position: relative;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
   }
   #side-by-side .cs-content {
     width: 50%;
-    padding: 2.5rem 0;
+    padding: 1em;
   }
   #side-by-side .cs-picture {
     height: auto;
-    width: 55%;
+    width: 45%;
   }
 }
