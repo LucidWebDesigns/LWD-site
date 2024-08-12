@@ -1,31 +1,32 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #about-hero-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
     padding: 1em;
     margin: auto;
+    object-fit: contain;
   }
   .cs-info {
     color: var(--titleTextColor);
   }
   .about-hero-image-container {
     /* border: 1px solid rgba(0,0,0,.1); */
-    border-radius: 50%;
-
+    border-radius: 10%;
     box-shadow: inset var(--neomorph);
+    margin: auto;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #about-hero-image {
-    width: 320px;
-    height: 320px;
+    width: 420px;
+    height: 420px;
   }
   .about-hero-image-container {
-    width: 320px;
-    height: 320px;
+    width: 420px;
+    height: 420px;
   }
 }
 
@@ -45,5 +46,5 @@
 #steps .step {
   /* box-shadow: var(--neomorph); */
   padding: 5em;
-  border-radius: 20px;
+  border-radius: 15px;
 }
