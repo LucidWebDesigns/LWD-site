@@ -32,7 +32,7 @@
   .cs-form-group {
     background-color: #fff;
     padding: 1em;
-    box-shadow: var(--neomorph);
+    box-shadow: inset var(--neomorph);
     border-radius: 20px;
 
   }

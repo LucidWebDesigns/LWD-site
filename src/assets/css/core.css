@@ -1,7 +1,6 @@
 :root {
   /* ################################ TOBY ####################################### */
   --url-img-1: url(../images/bulb-bg.avif);
-
   --margin-img-1-mobile: 30vh;
   --margin-img-1-big: 50vh;
   --min-vh-img-1-mobile: 100vh;
@@ -24,8 +23,10 @@
   --neomorph-btn: 2px 2px 5px rgba(0,0,0,.5), -2px -2px 5px rgba(255,255,255,.25);
   /* --yellow-gradient:background: rgb(255,252,208);
 background: linear-gradient(90deg, rgba(255,252,248,1) 0%, rgba(255,251,244,1) 15%, rgba(225,225,212,1) 86%); */
-  --light-blue-bg: #dfecf4;
-  --pastel-green-bg: rgb(196, 202, 223);
+  --light-blue-bg: #ddf2f4;
+  --pastel-green-bg: rgb(162, 182, 255);
+  --text-bg: rgb(226, 237, 244);
+  --item-bg: rgb(255, 255, 255);
 
   /*################################# code stitch #################################*/
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
@@ -353,7 +354,7 @@ a {
   text-decoration: none;
   font-weight: 700;
   text-align: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   color: #fff;
   min-width: 5.375rem;
   padding: 0 1.5rem;
@@ -411,6 +412,9 @@ a {
  
   .top-section-jumboless {
     padding-top: 12.5vh;
+    background-image: url("../images/falconHeavy.jpeg");
+    background-blend-mode: darken;
+    background-color:  rgba(15, 88, 133, .45);
   }
   .nav-toggle-label {
     display: flex;
@@ -564,7 +568,12 @@ a {
     margin-top: 50vh;
   } */
   .top-section-jumboless {
-    padding-top: 0vh;
+    padding-top: 10vh;
+    background-image: url("../images/falconHeavy.jpeg");
+    background-size: 100%;
+    background-blend-mode: darken;
+    background-color:  rgba(15, 88, 133, .45);
+    background-attachment: fixed;
   }
   .nav {
     display: flex;
@@ -684,7 +693,7 @@ ul {
   line-height: 1.2em;
   text-align: inherit;
   max-width: 43.75rem;
-  margin: 0 0 1rem 0;
+  margin: 4em 0 1rem 0;
   position: relative;
 }
 
