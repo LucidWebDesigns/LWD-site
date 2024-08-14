@@ -86,11 +86,13 @@
     max-width: 300px;
     margin: 1.5rem 0;
     box-shadow: var(--neomorph);
+    border: 1px solid rgba(0,0,0,.15);
   }
   #pricing .cs-item.cs-popular {
-    box-shadow: var(--neomorph);
+    box-shadow: var(--neomorph), 0px 0px 20px var(--primary);
     z-index: 1;
     font-size: 1.1em;
+
   }
   .cs-price,
   .cs-frequency {

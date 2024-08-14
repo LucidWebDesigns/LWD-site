@@ -127,86 +127,10 @@
       }
     </script>
     <!-- END EMAIL JS -->
-
-
-    <style>
-      .top-section-jumboless .bg-curve-white  {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        z-index: 1;
-      }
-
-      .bg-curve-white {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-      }
-
-      .bg-curve-white svg {
-        position: relative;
-        display: block;
-        width: calc(300% + 1.3px);
-        height: 600px;
-        transform: rotateY(180deg);
-        z-index: -1;
-      }
-
-      .bg-curve-white-bottom {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-      }
-
-      .bg-curve-white-bottom svg {
-        position: relative;
-        display: block;
-        width: calc(245% + 1.3px);
-        height: 600px;
-      }
-
-      .bg-curve-white .shape-fill,
-      .bg-curve-white-bottom .shape-fill {
-        fill: #ffffff;
-        z-index: -1;
-      }
-
-      .bg-curve-gradient {
-        fill: linear-gradient(
-          90deg,
-          rgba(2, 0, 36, 1) 0%,
-          rgba(1, 60, 132, 1) 0%,
-          rgba(0, 149, 255, 1) 100%
-        );
-        z-index: -1;
-      }
-
-
-      /*  */
-        .skip {
-            z-index: -1111111;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-        }
-    </style>
-    
   </head>
   <body>
-
 <a class="skip" aria-label="skip to main content" href="#main" tabindex="1">Click To Skip To Main Content</a>
         {% include "components/header.html" %}
-
         <main id="main">
             {{ content | safe }}
         </main>

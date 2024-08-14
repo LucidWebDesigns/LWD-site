@@ -20,24 +20,6 @@ layout: "layouts/base.html"
     <link rel="stylesheet" href="/assets/css/section/pricing.css" />
     <link rel="stylesheet" href="/assets/css/section/hero.css" />
     <link rel="stylesheet" href="/assets/css/section/side-by-side.css" />
-
-    <!-- Script for Netlify Identity -->
-    <!-- <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
-        }
-    </script> -->
 {% endblock %}
 
 {% block body %}
@@ -50,7 +32,6 @@ layout: "layouts/base.html"
     <div class="content hero pt-sm">
       <div class="container flow pt-md">
         <div class="hero__content flow pt-sm">
-          <!-- <h1 class="cs-title-light">We design, develop, and maintain business websites</h1> -->
           <h1 class="cs-title-light">Take your business to the next level.</h1>
 
           <p>
@@ -60,9 +41,7 @@ layout: "layouts/base.html"
             <a href="/contact" class="cs-button-solid">GET IN TOUCH!</a>
           </div>
         </div>
-        <!-- <div class="jumbo-hero-index-container"> -->
         <div class="">
-          <!-- <img src="./assets/images/3owners.png" alt="" class="jumbo-hero__image">        <div class="jumbo-hero-index-container"></div></img> -->
         </div>
       </div>
       </div>
@@ -173,8 +152,8 @@ layout: "layouts/base.html"
     </div>
   </section>
 
-  <section id="hero-2" class="white-bg">
-    <div class="cs-content-container content">
+  <section id="hero-2" class="white-bg content">
+    <div class="cs-content-container ">
         <div id="excellence-content" class="cs-content pt-lg pb-lg">
           <h1  class="cs-title">Who is Lucid Web Designs?</h1>
           <p class="cs-text">

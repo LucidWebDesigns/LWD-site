@@ -24,8 +24,9 @@
   /* --yellow-gradient:background: rgb(255,252,208);
 background: linear-gradient(90deg, rgba(255,252,248,1) 0%, rgba(255,251,244,1) 15%, rgba(225,225,212,1) 86%); */
   --light-blue-bg: #ddf2f4;
-  --pastel-green-bg: rgb(162, 182, 255);
+  --pastel-green-bg: rgb(200, 209, 210);
   --text-bg: rgb(226, 237, 244);
+  --text-bg: rgb(255, 255, 255);
   --item-bg: rgb(255, 255, 255);
 
   /*################################# code stitch #################################*/
@@ -359,16 +360,19 @@ a {
   min-width: 5.375rem;
   padding: 0 1.5rem;
   /* background-color: var(--primary); */
-  background-color: rgba(66, 183, 255, 1);
-  border-radius: 0.25rem;
+  /* background-color: rgba(66, 183, 255, 1); */
   display: inline-block;
   position: relative;
-  z-index: 1;
+  z-index: 1000;
   /* prevents padding from adding to the width */
-  box-sizing: border-box;
-  box-shadow: var(--neomorph-btn)
+  /* box-sizing: border-box;
+  box-shadow: var(--neomorph-btn) */
+  border-radius: 0.5em;
+  background: linear-gradient(145deg, #3ba5e6, #47c4ff);
+  box-shadow:  3px 3px 5px rgba(0, 0, 0, .5),
+              3px -3px 5px rgba(255, 255, 255, .5);
 }
-.cs-button-solid:before,
+.cs-button-solid:before3
 .cs-button-solid:before {
   content: "";
   position: absolute;
@@ -730,11 +734,17 @@ background-color,
 .gradient {
   color: white;
   position: relative;
-  background: linear-gradient(
+  /* background: linear-gradient(
     270deg,
     rgba(2, 0, 36, .1) 0%,
     rgba(1, 60, 132, .8) 0%,
     rgba(50, 129, 235, 1) 100%
+  ); */
+    background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(1, 60, 132, 1) 0%,
+    rgba(0, 149, 255, 1) 100%
   );
   z-index: 40;
   min-width: 100vw;
@@ -874,12 +884,7 @@ button:hover,
 a:hover {
   cursor: pointer;
 }
-#hero-2 img {
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  margin: auto;
-}
+
 iframe {
   min-height: 100vh;
   min-width: 100vw;
@@ -889,3 +894,81 @@ iframe {
 }
 
 
+/* #################### S V G ##################### */
+      .top-section-jumboless .bg-curve-white  {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: 1;
+      }
+
+    .top-section-jumboless .bg-curve-white svg  {
+        opacity: 75%;
+      }
+
+      #hero .bg-curve-white-bottom svg {
+        /* opacity: 50%; */
+      }
+
+      .bg-curve-white {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .bg-curve-white svg {
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 600px;
+        transform: rotateY(180deg);
+        z-index: -1;
+      }
+
+      .bg-curve-white-bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .bg-curve-white-bottom svg {
+        position: relative;
+        display: block;
+        width: calc(245% + 1.3px);
+        height: 600px;
+      }
+
+      .bg-curve-white .shape-fill,
+      .bg-curve-white-bottom .shape-fill {
+        fill: #ffffff;
+        z-index: -1;
+      }
+
+      .bg-curve-gradient {
+        fill: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(1, 60, 132, 1) 0%,
+          rgba(0, 149, 255, 1) 100%
+        );
+        z-index: -1;
+      }
+
+
+      /*  */
+        .skip {
+            z-index: -1111111;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
