@@ -846,6 +846,9 @@ font sizes, styles
 }
 
 @media only screen and (min-width: 0rem) {
+  svg {
+    min-width: 500vw;
+  }
   .cs-wrapper {
     display: flex;
     justify-content: center;
@@ -872,6 +875,9 @@ font sizes, styles
   }
 }
 @media only screen and (min-width: 48rem) {
+  svg {
+     min-width: 400vw;
+  }
   .bg-overlay {
     background-attachment: fixed;
     height: 45vh;
@@ -906,7 +912,7 @@ iframe {
       }
 
     .top-section-jumboless .bg-curve-white svg  {
-        opacity: 75%;
+        /* opacity: 75%; */
       }
 
       #hero .bg-curve-white-bottom svg {

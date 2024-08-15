@@ -127,6 +127,27 @@
       }
     </script>
     <!-- END EMAIL JS -->
+
+    <!-- START CAROSEL -->
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".articles__list");
+        const items = carousel.children;
+        const totalItems = items.length;
+
+        // Clone the carousel items
+        for (let i = 0; i < totalItems*2; i++) {
+          const clone = items[i].cloneNode(true);
+          carousel.appendChild(clone);
+        }
+
+        // Adjust the speed of the scroll based on the number of items
+        const totalWidth = totalItems * (300 + 2 * parseInt(getComputedStyle(items[0]).marginRight)); // Adjust width based on item size and margin
+        carousel.style.width = `${totalWidth}px`;
+        const speed = 30 * totalItems / 4;
+        carousel.style.animationDuration = `${speed}s`;
+      });
+    </script>
   </head>
   <body>
 <a class="skip" aria-label="skip to main content" href="#main" tabindex="1">Click To Skip To Main Content</a>

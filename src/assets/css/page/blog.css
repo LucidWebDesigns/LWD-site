@@ -40,23 +40,59 @@
   background-color: var(--clr-neutral-900);
 }
 
-.articles__list {
+/* Container for the carousel */
+.articles__carousel {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  max-width: 1200px; /* Restrict max width for better alignment */
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  justify-content: center; /* Center content when there's only one post */
+  overflow-x: hidden; /* Hide scrollbar */
+  scroll-snap-type: x mandatory;
+  gap: 1em;
+  padding: 1em;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  justify-content: center; /* Center the items */
+  position: relative;
+  height: 500px;
+  
+  background: rgba(0,0,0,0);
+  box-shadow: inset 7px 7px 14px #afbec0,
+          inset -7px -7px 14px #ffffff;
+  border-radius: 2em;
 }
 
-.articles__list li {
+/* Blog snippets list */
+.articles__list {
+  display: flex;
+  flex-wrap: nowrap; /* Disable wrapping */
   list-style: none;
-  flex: 1 1 300px; /* Allow flex items to grow, shrink, and have a base width */
-  margin: 1em;
-  max-width: 350px; /* Limit the maximum width of each post to prevent stretching */
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* Center the items */
+  position: absolute;
+  animation: scroll 15s linear infinite;
 }
+
+/* Each list item in the carousel */
+.articles__list li {
+  flex: 0 0 300px; /* Fixed width for each carousel item */
+  max-width: 300px;
+  scroll-snap-align: center; /* Align items to the center */
+  margin: 0 1em;
+  border-radius: 15px;
+}
+
+/* Keyframes for scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
 
 #featured-articles .snippet {
   background-color: var(--text-bg);

@@ -1,6 +1,6 @@
 ---
 title: Lucid Web Designs | Austin, TX'
-description: 'Meta description for the page'
+description: 'Lucid Web Designs, based in Austin, TX, specializes in handcrafted, high-performance websites tailored for small businesses. With a focus on mobile-first design, seamless user experience, and optimized performance, we help you elevate your online presence. Get started today with affordable, custom web solutions starting at just $200/month.'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 preloadImg: '/assets/images/3owners.png'
@@ -174,27 +174,29 @@ layout: "layouts/base.html"
       <p id="featured-articles" class="text-center pb-md">
         Here are some sample articles that capture the essence of what our site offers. Dive in to get a clear understanding of our focus and expertise.
       </p>
-      <ul role="list" class="articles__list ">
-        {%- for post in collections.featured | reverse -%} 
-                 <li>
-                    <article class="snippet">
-                        <img
-                        src="{{ post.data.image }}"
-                        alt="{{ post.data.imageAlt }}"
-                        class="snippet__image"
-                        />
-                        <h3 class="snippet__title">
-                        <a href="{{ post.url }}">{{ post.data.title }}</a>
-                        </h3>
-                        <p class="snippet__body">
-                        {{ post.data.description }}
-                        </p>
-                        <!-- <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('{{ post.data.title }}', event)">READ MORE</a> -->
-                        <a href="{{ post.url }}" class="cs-button-solid">READ MORE</a>
-                    </article>
-                </li>
-            {%- endfor %}
-      </ul>
+      <div class="articles__carousel">
+        <ul role="list" class="articles__list ">
+          {%- for post in collections.featured | reverse -%} 
+                  <li>
+                      <article class="snippet">
+                          <img
+                          src="{{ post.data.image }}"
+                          alt="{{ post.data.imageAlt }}"
+                          class="snippet__image"
+                          />
+                          <h3 class="snippet__title">
+                          <a href="{{ post.url }}">{{ post.data.title }}</a>
+                          </h3>
+                          <p class="snippet__body">
+                          {{ post.data.description }}
+                          </p>
+                          <!-- <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('{{ post.data.title }}', event)">READ MORE</a> -->
+                          <a href="{{ post.url }}" class="cs-button-solid">READ MORE</a>
+                      </article>
+                  </li>
+              {%- endfor %}
+        </ul>
+      </div>
     </div>
     </div>
     <div class="bg-curve-white bg-curve">
