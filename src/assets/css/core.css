@@ -547,6 +547,18 @@ a {
     margin: auto; 
     padding-top: 2em;
   }
+
+  .top-section-jumboless {
+    padding-top: 10vh;
+    background-image: url("../images/falconHeavy.jpeg");
+    background-size: 300%;
+    background-blend-mode: darken;
+    background-color:  rgba(15, 88, 133, .45);
+    background-attachment: fixed;
+    background-position-x: 50%;
+  }
+
+
 }
 
 /* Desktop styles */
@@ -697,7 +709,7 @@ ul {
   line-height: 1.2em;
   text-align: inherit;
   max-width: 43.75rem;
-  margin: 4em 0 1rem 0;
+  margin: 1em 0 1rem 0;
   position: relative;
 }
 
@@ -846,9 +858,12 @@ font sizes, styles
 }
 
 @media only screen and (min-width: 0rem) {
+
   svg {
     min-width: 500vw;
+    height: 100%;
   }
+
   .cs-wrapper {
     display: flex;
     justify-content: center;
@@ -901,80 +916,94 @@ iframe {
 
 
 /* #################### S V G ##################### */
-      .top-section-jumboless .bg-curve-white  {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        z-index: 1;
-      }
+.top-section-jumboless {
+  height: 100vh;
 
-    .top-section-jumboless .bg-curve-white svg  {
-        /* opacity: 75%; */
-      }
-
-      #hero .bg-curve-white-bottom svg {
-        /* opacity: 50%; */
-      }
-
-      .bg-curve-white {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-      }
-
-      .bg-curve-white svg {
-        position: relative;
-        display: block;
-        width: calc(300% + 1.3px);
-        height: 600px;
-        transform: rotateY(180deg);
-        z-index: -1;
-      }
-
-      .bg-curve-white-bottom {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-      }
-
-      .bg-curve-white-bottom svg {
-        position: relative;
-        display: block;
-        width: calc(245% + 1.3px);
-        height: 600px;
-      }
-
-      .bg-curve-white .shape-fill,
-      .bg-curve-white-bottom .shape-fill {
-        fill: #ffffff;
-        z-index: -1;
-      }
-
-      .bg-curve-gradient {
-        fill: linear-gradient(
-          90deg,
-          rgba(2, 0, 36, 1) 0%,
-          rgba(1, 60, 132, 1) 0%,
-          rgba(0, 149, 255, 1) 100%
-        );
-        z-index: -1;
-      }
+}
+.top-section-jumboless svg {
+  top: 0;
+  margin-top: 0;
+  padding: 0;
+  height: 100%;
+}
 
 
-      /*  */
-        .skip {
-            z-index: -1111111;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-        }
+.top-section-jumboless .bg-curve-white  {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+}
+
+.top-section-jumboless .bg-curve-white svg  {
+  /* opacity: 75%; */
+}
+
+#hero .bg-curve-white-bottom svg {
+  /* opacity: 50%; */
+}
+
+.bg-curve-white {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.bg-curve-white svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 600px;
+  transform: rotateY(180deg);
+  z-index: -1;
+}
+
+.bg-curve-white-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.bg-curve-white-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(245% + 1.3px);
+  height: 600px;
+}
+
+.bg-curve-white .shape-fill,
+.bg-curve-white-bottom .shape-fill {
+  fill: #ffffff;
+  z-index: -1;
+}
+
+.bg-curve-gradient {
+  fill: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(1, 60, 132, 1) 0%,
+    rgba(0, 149, 255, 1) 100%
+  );
+  z-index: -1;
+}
+
+
+/*  */
+.skip {
+    z-index: -1111111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
