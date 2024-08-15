@@ -363,7 +363,7 @@ a {
   /* background-color: rgba(66, 183, 255, 1); */
   display: inline-block;
   position: relative;
-  z-index: 1000;
+  z-index: 10;
   /* prevents padding from adding to the width */
   /* box-sizing: border-box;
   box-shadow: var(--neomorph-btn) */
@@ -439,17 +439,13 @@ a {
   }
 
   .nav {
+    z-index:11111111;
     top: 0%;
     height: 100vh;
     transition: 0.5s;
     width: 0px;
-    /* display: none; */
     position: absolute;
-    /* right: 250px; */
     left: 0;
-    /* top: 100%; */
-    /* background: var(--clr-neutral-100); */
-    /* background: rgba(0, 0, 0, 0.85); */
     background: linear-gradient(
       90deg,
       rgba(2, 0, 36, 1) 0%,
@@ -490,48 +486,58 @@ a {
   .nav-list li:nth-child(1) {
     width: 0;
     opacity: 0%;
+    display: none;
   }
   .nav-list li:nth-child(2) {
     width: 0;
     opacity: 0%;
+    display: none;
   }
   .nav-list li:nth-child(3) {
     width: 0;
     opacity: 0%;
+    display: none;
   }
   .nav-list li:nth-child(4) {
     width: 0;
     opacity: 0%;
+    display: none;
   }
   .nav-list li:nth-child(5) {
     width: 0;
     opacity: 0%;
+    display: none;
   }
   .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(1) {
+    display: block;
     opacity: 100%;
     width: 100%;
     transition: 0.5s;
     transition-delay: 0.1s;
   }
   .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(2) {
+    display: block;
     opacity: 100%;
     width: 100%;
     transition: 0.5s;
     transition-delay: 0.2s;
   }
   .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(3) {
+    display: block;
     opacity: 100%;
     width: 100%;
     transition: 0.5s;
     transition-delay: 0.3s;
   }
   .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(4) {
+    display: block;
     opacity: 100%;
     width: 100%;
     transition: 0.5s;
     transition-delay: 0.4s;
   }
   .nav-toggle:checked + .nav-toggle-label + .nav li:nth-child(5) {
+    display: block;
     opacity: 100%;
     width: 100%;
     transition: 0.5s;
@@ -967,7 +973,6 @@ iframe {
   width: calc(300% + 1.3px);
   height: 600px;
   transform: rotateY(180deg);
-  z-index: -1;
 }
 
 .bg-curve-white-bottom {
