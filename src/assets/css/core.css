@@ -414,12 +414,6 @@ a {
   /* ******************************* */
   /* ******************************* */
  
-  .top-section-jumboless {
-    padding-top: 12.5vh;
-    background-image: url("../images/falconHeavy.jpeg");
-    background-blend-mode: darken;
-    background-color:  rgba(15, 88, 133, .45);
-  }
   .nav-toggle-label {
     display: flex;
     z-index: 1000;
@@ -547,7 +541,7 @@ a {
     margin-top: 40vh;
   } */
   .page-header-title {
-    text-align: center;
+    /* text-align: center; */
     font-size: 2.5em;
     letter-spacing: .3rem;
     margin: auto; 
@@ -557,7 +551,7 @@ a {
   .top-section-jumboless {
     padding-top: 10vh;
     background-image: url("../images/falconHeavy.jpeg");
-    background-size: 300%;
+    background-size: 350%;
     background-blend-mode: darken;
     background-color:  rgba(15, 88, 133, .45);
     background-attachment: fixed;
@@ -570,11 +564,11 @@ a {
 /* Desktop styles */
 @media (min-width: 869px) {
   .page-header-title {
-    text-align: center;
+    /* text-align: center; */
     font-size: 3.5em;
     letter-spacing: .3rem;;
     margin: auto;
-    padding-top: 1em;
+    padding-top: 2em;
   }
   .page-header {
     padding: 2em 12vw;
@@ -592,7 +586,8 @@ a {
   .top-section-jumboless {
     padding-top: 10vh;
     background-image: url("../images/falconHeavy.jpeg");
-    background-size: 100%;
+    /* background-size: 100%; */
+    background-size: clamp(90rem, 100vw, 130rem);
     background-blend-mode: darken;
     background-color:  rgba(15, 88, 133, .45);
     background-attachment: fixed;
@@ -1005,6 +1000,10 @@ iframe {
   z-index: -1;
 }
 
+.hero__content {
+  margin-top: 20vh;
+}
+
 
 /*  */
 .skip {
@@ -1014,5 +1013,14 @@ iframe {
     left: 0;
     opacity: 0;
 }
+.bg-overlay {
+  flex-direction: column;
+}
 
-
+.bg-overlay p {
+  color: white;
+  margin: auto;
+  width: 100%;
+  text-align: left;
+  padding-bottom: .5em;
+}

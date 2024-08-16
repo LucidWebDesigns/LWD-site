@@ -45,6 +45,7 @@
 .hero__content p {
   padding: 1em 0;
   color: white;
+  max-width: 600px;
 }
 svg {
   z-index:-1;
@@ -87,6 +88,9 @@ svg {
   div:has(.hero__image) {
     padding: 2em;
   }
+  .top-section-jumboless .cs-title-light {
+    padding-top: auto;
+  }
 }
 .jumbo-hero-index-container {
   background: rgb(255,252,208);
@@ -94,6 +98,4 @@ svg {
   border-radius: 100%;
   z-index: 10;
 }
-
-
 
