@@ -26,7 +26,7 @@
     align-items: stretch;
     /* 48px - 64px */
     gap: clamp(3rem, 5vw, 4rem);
-    padding: 1.5em;
+    padding: 1.5em 0;
   }
 
   .cs-form-group {
@@ -161,23 +161,8 @@
     z-index: 1;
     transition: color 0.3s;
   }
-  .cs-button-solid:before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    background: #000;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
   .cs-button-solid:hover {
     color: #fff;
-  }
-  .cs-button-solid:hover:before {
-    width: 100%;
   }
 
   #contact .cs-info-group {
@@ -257,5 +242,63 @@
   #contact .cs-container {
     margin: 0 auto;
     /* added margin */
+  }
+}
+
+/* FAQ */
+#faq h2 {
+  text-align: center;
+  font-size: 2.25em;
+  margin-bottom: 1.5em;
+}
+
+.faq-items {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: center; /* Centers the items within the container */
+  gap: 1.5em; /* Adds space between the items */
+  align-items: flex-start; /* Keeps items aligned at the top */
+}
+
+.faq-item {
+  background: white;
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: var(--neomorph);
+  max-width: 300px;
+  flex: 1 1 calc(33.333% - 3em); /* Responsive width with space for gaps */
+  margin: 0.5em; /* Adds a bit of margin around each item for spacing */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  cursor: pointer;
+  transition: margin 0.3s ease-in-out; /* Smooth transition for margin adjustments */
+}
+
+.faq-item h3 {
+  font-size: 1.25em;
+}
+
+.faq-item p {
+  margin-top: 1em;
+  transition: font-size 0.25s, opacity 0.25s; /* Smooth transition for text appearance */
+  font-size: 0;
+  opacity: 0;
+}
+
+.view-faq p {
+  font-size: 1em;
+  opacity: 1;
+  margin-bottom: 1.5em; /* Adds space below expanded content */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .faq-item {
+    flex: 1 1 calc(50% - 2em); /* Adjusts to two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-item {
+    flex: 1 1 100%; /* Full width on very small screens */
   }
 }

@@ -61,9 +61,7 @@ svg {
     width: 60%;
     /* max-height: max(15rem, 40vh); */
     object-fit: cover;
-    margin: mar;
     border-radius: 50%;
-    /* box-shadow: var(--neomorph); */
     border: 1px solid rgba(0,0,0,.1);
   }
 }

@@ -148,6 +148,29 @@
         carousel.style.animationDuration = `${speed}s`;
       });
     </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const items = document.querySelectorAll(".faq-item");
+
+      items.forEach(item => {
+        item.addEventListener("click", function() {
+          // Check if the clicked item already has 'view-faq' class
+          const isActive = this.classList.contains("view-faq");
+
+          // Remove 'view-faq' class from all faq-items
+          items.forEach(i => i.classList.remove("view-faq"));
+          
+          // If the clicked item was not active, add 'view-faq' class to it
+          if (!isActive) {
+            this.classList.add("view-faq");
+          }
+        });
+      });
+    });
+  </script>
+
+
   </head>
   <body>
 <a class="skip" aria-label="skip to main content" href="#main" tabindex="1">Click To Skip To Main Content</a>
