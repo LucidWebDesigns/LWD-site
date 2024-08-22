@@ -215,3 +215,7 @@
     min-height: 25rem;
   }
 }
+.cs-item-text span, .cs-item-text-popular span {
+  color: var(--primary);
+  margin-right: .75em;
+}
