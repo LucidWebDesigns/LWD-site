@@ -1037,3 +1037,7 @@ iframe {
   opacity: 1;
   transform: translateX(0);
 }
+
+main {
+  overflow-x: hidden;
+}
