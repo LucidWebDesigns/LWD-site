@@ -52,21 +52,9 @@
     display: inline-flex;
     /* box-shadow: var(--neomorph); */
     padding: 1em;
-    /* border-radius: 20px;
-    background: white; */
-
     border-radius: 25px;
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow:  5px 5px 10px #cccccc,
-    -5px -5px 10px #f4f4f4;
-
-    color: transparent;
-    background: #666666;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
-
+    box-shadow: var(--neomorph);
+    background: #ffffff;
   }
 
   input[type="text"], input[type="email"], input[type="phone"], textarea  {
@@ -105,7 +93,7 @@
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
-    
+    background-color: white;
   }
   #contact .cs-title {
     margin: 0 0 1.5rem;

@@ -39,7 +39,7 @@ layout: "layouts/base.html"
                 {% include 'components/featured-post.html' %}
                 <ul role="list" class="blog-page__list">
                     {%- for post in collections.post | reverse -%} 
-                    <li>
+                    <li class="fade-in">
                         <article class="blog-page-snippet">
                             <img
                                 src="{{ post.data.image }}"
