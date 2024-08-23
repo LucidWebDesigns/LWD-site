@@ -529,14 +529,15 @@ a {
     padding-top: 2em;
   }
 
-  .top-section-jumboless {
+  /* .top-section-jumboless {
     padding-top: 10vh;
     background-image: url("../images/falconHeavyReversed.avif");
     background-size: 350%;
     background-blend-mode: darken;
     background-color:  rgba(15, 88, 133, .66);
+    background-attachment: fixed;
     background-position-x: 50%;
-  }
+  } */
 
 
 }
@@ -563,7 +564,7 @@ a {
   /* .top-section {
     margin-top: 50vh;
   } */
-  .top-section-jumboless {
+  /* .top-section-jumboless {
     padding-top: 10vh;
     background-image: url("../images/falconHeavyReversed.avif");
     /* background-size: 100%; */
@@ -571,7 +572,7 @@ a {
     background-blend-mode: darken;
     background-color:  rgba(15, 88, 133, .66);
     background-attachment: fixed;
-  }
+  } */
   .nav {
     display: flex;
   }
@@ -1039,4 +1040,27 @@ iframe {
 
 main {
   overflow-x: hidden;
+}
+
+.top-section-jumboless {
+    padding-top: 10vh;
+    background-color: rgba(15, 88, 133, .66);
+    background-attachment: fixed;
+    background-position-x: 50%;
+}
+
+@media (min-width: 1024px) {
+    .top-section-jumboless {
+        background-image: url("../images/falconHeavyReversed.avif");
+        background-size: 100%;
+        background-blend-mode: darken;
+    }
+}
+
+@media (max-width: 1024px) {
+    .top-section-jumboless {
+        background-image: url("../images/falconHeavyReversed-mobile.avif");
+        background-size: 350%;
+        background-blend-mode: darken;
+    }
 }
