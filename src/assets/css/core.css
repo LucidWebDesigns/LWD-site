@@ -535,7 +535,6 @@ a {
     background-size: 350%;
     background-blend-mode: darken;
     background-color:  rgba(15, 88, 133, .66);
-    background-attachment: fixed;
     background-position-x: 50%;
   }
 
