@@ -8,7 +8,16 @@
     <title>{{ title }}</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/bulb.svg" />
     <link rel="stylesheet" href="/assets/css/core.css" />
-    <script
+  </head>
+  <body>
+<a class="skip" aria-label="skip to main content" href="#main" tabindex="1">Click To Skip To Main Content</a>
+        {% include "components/header.html" %}
+        <main id="main">
+            {{ content | safe }}
+        </main>
+        {% include "components/footer.html" %}
+
+      <script
       defer
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
@@ -148,15 +157,6 @@
         carousel.style.animationDuration = `${speed}s`;
       });
     </script>
-  </head>
-  <body>
-<a class="skip" aria-label="skip to main content" href="#main" tabindex="1">Click To Skip To Main Content</a>
-        {% include "components/header.html" %}
-        <main id="main">
-            {{ content | safe }}
-        </main>
-        {% include "components/footer.html" %}
-
   <script>
     const observerOptions = {
       root: null, // Use the viewport as the root
