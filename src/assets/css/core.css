@@ -529,15 +529,15 @@ a {
     padding-top: 2em;
   }
 
-  /* .top-section-jumboless {
-    padding-top: 10vh;
+  .top-section-jumboless {
+    /* padding-top: 10vh;
     background-image: url("../images/falconHeavyReversed.avif");
     background-size: 350%;
     background-blend-mode: darken;
     background-color:  rgba(15, 88, 133, .66);
     background-attachment: fixed;
-    background-position-x: 50%;
-  } */
+    background-position-x: 50%; */
+  }
 
 
 }
@@ -564,15 +564,15 @@ a {
   /* .top-section {
     margin-top: 50vh;
   } */
-  /* .top-section-jumboless {
-    padding-top: 10vh;
-    background-image: url("../images/falconHeavyReversed.avif");
+  .top-section-jumboless {
+    /* padding-top: 10vh;
+    background-image: url("../images/falconHeavyReversed.avif"); */
     /* background-size: 100%; */
-    background-size: clamp(90rem, 100vw, 130rem);
+    /* background-size: clamp(90rem, 100vw, 130rem);
     background-blend-mode: darken;
     background-color:  rgba(15, 88, 133, .66);
-    background-attachment: fixed;
-  } */
+    background-attachment: fixed; */
+  }
   .nav {
     display: flex;
   }
@@ -1042,6 +1042,7 @@ main {
   overflow-x: hidden;
 }
 
+/* ######################################################### */
 .top-section-jumboless {
     padding-top: 10vh;
     background-color: rgba(15, 88, 133, .66);
