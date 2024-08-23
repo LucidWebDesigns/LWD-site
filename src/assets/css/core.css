@@ -566,7 +566,7 @@ a {
   } */
   .top-section-jumboless {
     padding-top: 10vh;
-    background-image: url("../images/falconHeavy.jpeg");
+    background-image: url("../images/falconHeavyReversed.avif");
     /* background-size: 100%; */
     background-size: clamp(90rem, 100vw, 130rem);
     background-blend-mode: darken;
