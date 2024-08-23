@@ -532,7 +532,7 @@ a {
   .top-section-jumboless {
     padding-top: 10vh;
     background-image: url("../images/falconHeavyReversed.avif");
-    background-size: 350%;
+    background-size: 100%;
     background-blend-mode: darken;
     background-color:  rgba(15, 88, 133, .66);
     background-attachment: fixed;
