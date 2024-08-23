@@ -1050,7 +1050,7 @@ main {
     background-position-x: 50%;
 }
 
-/* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
     .top-section-jumboless {
         background-image: url("../images/falconHeavyReversed.avif");
         background-size: 100%;
@@ -1064,7 +1064,7 @@ main {
         background-size: 350%;
         background-blend-mode: darken;
     }
-} */
+}
 
 .top-section-jumboless {
     position: relative;
