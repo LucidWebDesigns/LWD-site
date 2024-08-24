@@ -1061,7 +1061,7 @@ main {
 @media (max-width: 1024px) {
     .top-section-jumboless {
         background-image: url("../images/falconHeavyReversed-mobile.avif");
-        background-size: 350%;
+        background-size: 250%;
         background-blend-mode: darken;
     }
 }
