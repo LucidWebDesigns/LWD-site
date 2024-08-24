@@ -121,11 +121,17 @@ layout: "layouts/base.html"
   <section id="side-by-side" class="white-bg pb-lg slide-in-right">
     <div class="content">
     <div class="cs-container">
-      <img
+      <object
         class="cs-picture"
-        src="../assets/images/pigbank.svg"
-        alt="Illustration of a piggy bank representing savings or financial plans"
-      />
+        data="../assets/images/pigbank.svg"
+        type="image/svg+xml"
+        aria-label="Illustration of a piggy bank representing savings or financial plans"
+      >
+        <!-- Fallback content if the SVG can't be loaded -->
+        <img src="../assets/images/pigbank.png" alt="Piggy bank illustration representing savings or financial plans">
+        <p>Your browser does not support SVG files. Here is a description of the image: Piggy bank illustration used to represent savings or financial plans.</p>
+      </object>
+
       <!-- Right Content Section-->
       <div class="cs-content">
         <h2 class="cs-title">
