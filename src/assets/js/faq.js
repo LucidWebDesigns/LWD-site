@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // const faqContainer = document.querySelector('.faq-items');
+    const faqContainer = document.querySelector('.faq-items');
 
     const faqData = [
     {
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // faqContainer.appendChild(faqItem);
+    faqContainer.appendChild(faqItem);
   });
     
 
