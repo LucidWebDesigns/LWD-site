@@ -65,7 +65,7 @@
   #pricing .cs-card-group {
     gap: 2em;
     width: 100%;
-    max-width: 57rem;
+    max-width: 60rem;
     margin: 3rem 0 0 0;
     padding: 0;
     display: flex;
@@ -88,20 +88,32 @@
     box-shadow: var(--neomorph);
     border: 1px solid rgba(0,0,0,.15);
   }
-  #pricing .cs-item.cs-popular {
+    #pricing .cs-item-popular {
+    width: 100%;
+    padding: clamp(2.2rem, 2.2vw, 2.75rem) clamp(1.1rem, 1.65vw, 2.2rem);
+    /* background-color: rgba(255,255,255,1); */
+    background: var(--item-bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 15px;
+    max-width: 330px;
+    margin: 1.5rem 0;
     box-shadow: var(--neomorph), 0px 0px 20px var(--primary);
+    border: 1px solid rgba(0,0,0,.15);
     z-index: 1;
     font-size: 1.1em;
-
-  }
-  .cs-price,
-  .cs-frequency {
-    color: var(--primary);
-    font-size: 5em;
   }
   #pricing .cs-item .cs-price,
-  #pricing .cs-item .cs-frequency {
+  #pricing .cs-item-popular .cs-price,
+  #pricing .cs-item .cs-frequency,
+  #pricing .cs-item-popular .cs-frequency {
     color: var(--primary);
+  }
+  #pricing .cs-item-popular .cs-price {
+    font-size: 3.5em;
   }
   #pricing .cs-package {
     font-size: 1rem;
@@ -150,7 +162,7 @@
     color: var(--bodyTextColor);
   }
   .cs-item-text-popular {
-    font-size: 1.25;
+    font-size: 1.25rem;
     color: var(--bodyTextColor);
   }
   .cs-item-header {
@@ -191,7 +203,6 @@
   #pricing .cs-card-group {
     gap: 0;
     flex-direction: row;
-    align-items: stretch;
   }
 
   #pricing .cs-item.cs-popular {
@@ -218,4 +229,8 @@
 .cs-item-text span, .cs-item-text-popular span {
   color: var(--primary);
   margin-right: .75em;
+}
+
+.cs-item-text, .cs-item-text-popular{
+  display: flex;
 }
