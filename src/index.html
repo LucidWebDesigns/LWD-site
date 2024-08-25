@@ -32,8 +32,11 @@ layout: "layouts/base.html"
 
   <section class="top-section-jumboless">
     <img src="{{ preloadImg }}" alt="Hero Image" class="hero-bg-img">
+    <!-- <div class="content hero">
+      <div class="container flow"> -->
         <div class="hero__content flow content">
           <h1 class="cs-title-light">Take your business to the next level.</h1>
+
           <p>
             No page builders. No WordPress. Just 100% hand-coded websites. Superior results starting at $200/month.
           </p>
@@ -41,6 +44,9 @@ layout: "layouts/base.html"
             <a href="/contact" class="cs-button-solid">GET IN TOUCH!</a>
           </div>
         </div>
+      <!-- </div>
+      </div> -->
+      </section>
   </section>
 
   <!-- ============================================ -->
@@ -184,7 +190,7 @@ layout: "layouts/base.html"
                           {{ post.data.description }}
                           </p>
                           <!-- <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('{{ post.data.title }}', event)">READ MORE</a> -->
-                          <a href="{{ post.url }}" class="cs-button-solid"><span class="sr-only">Read more about {{ post.data.title }}</span>READ MORE</a>
+                          <a href="{{ post.url }}" class="cs-button-solid"><span class="sr-only">{{ post.data.title }}</span>READ MORE</a>
                       </article>
                   </li>
               {%- endfor %}
