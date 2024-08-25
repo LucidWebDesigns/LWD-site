@@ -51,7 +51,7 @@
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   justify-content: center; /* Center the items */
   position: relative;
-  height: 470px;
+  height: 500px;
   
   background: rgba(0,0,0,0);
   box-shadow: inset 7px 7px 14px #afbec0,
