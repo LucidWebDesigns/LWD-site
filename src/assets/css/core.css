@@ -13,7 +13,7 @@
   --bg-color: rgb(15, 88, 133);
   --item-box-shadow: -1px -5px 15px rgba(66, 183, 255, 0.35),
     1px -5px 15px rgba(66, 183, 255, 0.35);
-  --primary: rgb(66, 183, 255);
+  --primary: rgb(0, 157, 255);
   --placeholderColor: #1a1a1a;
   --bodyTextColor: #4d4d4d;
   --titleTextColor: #2f2f2f;
@@ -368,7 +368,7 @@ a {
   /* box-sizing: border-box;
   box-shadow: var(--neomorph-btn) */
   border-radius: 0.5em;
-  background: linear-gradient(145deg, #3ba5e6, #47c4ff);
+  background: linear-gradient(145deg, #28a4f2, #0094d8);
   /* box-shadow:  3px 3px 5px rgba(0, 0, 0, .5),
               3px -3px 5px rgba(255, 255, 255, .5); */
 }
@@ -444,7 +444,7 @@ a {
       90deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(1, 60, 132, 1) 100%,
-      rgba(0, 149, 255, 1) 100%
+      rgba(0, 157, 255, 1) 100%
     );
     flex-direction: column;
     align-items: center;
@@ -600,11 +600,12 @@ a {
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(1, 60, 132, 1) 0%,
-    rgba(0, 149, 255, 1) 100%
+    rgba(0, 157, 255, 1) 100%
   );
 }
 .site-footer a {
   color: white;
+  line-height: 2em;
 }
 /* .site-footer a:visted {
   color: white;
@@ -738,7 +739,7 @@ background-color,
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(1, 60, 132, 1) 0%,
-    rgba(0, 149, 255, 1) 100%
+    rgba(0, 157, 255, 1) 100%
   );
   z-index: 40;
   min-width: 100vw;
@@ -972,7 +973,7 @@ iframe {
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(1, 60, 132, 1) 0%,
-    rgba(0, 149, 255, 1) 100%
+    rgba(0, 157, 255, 1) 100%
   );
   z-index: -1;
 }
@@ -1089,4 +1090,15 @@ main {
     padding-top: 10vh;
     text-align: center;
     color: white;
+}
+
+.sr-only {
+  position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

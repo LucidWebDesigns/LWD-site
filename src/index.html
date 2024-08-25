@@ -32,11 +32,8 @@ layout: "layouts/base.html"
 
   <section class="top-section-jumboless">
     <img src="{{ preloadImg }}" alt="Hero Image" class="hero-bg-img">
-    <!-- <div class="content hero">
-      <div class="container flow"> -->
         <div class="hero__content flow content">
           <h1 class="cs-title-light">Take your business to the next level.</h1>
-
           <p>
             No page builders. No WordPress. Just 100% hand-coded websites. Superior results starting at $200/month.
           </p>
@@ -44,9 +41,6 @@ layout: "layouts/base.html"
             <a href="/contact" class="cs-button-solid">GET IN TOUCH!</a>
           </div>
         </div>
-      <!-- </div>
-      </div> -->
-      </section>
   </section>
 
   <!-- ============================================ -->
@@ -62,7 +56,7 @@ layout: "layouts/base.html"
           <h2  class="cs-title">Crafting Digital Excellence</h2>
           <p>
             We specialize in bespoke web design and development for small businesses across the US. Every line of code is meticulously hand-written to ensure peak performance, driving more customers to your site and boosting your business revenue.
-            <span><a class="href-link" href="">Learn more about Lucid Web Designs</a></span>
+            <span><a class="href-link" href="">LEARN MORE</a></span>
           </p>
         </div>
       </div>
@@ -144,7 +138,7 @@ layout: "layouts/base.html"
           class="cs-button-solid"
           aria-label="learn more about our programs"
           href=""
-          >Learn more about our services</a
+          >Learn More</a
         >
       </div>
     </div>
@@ -157,7 +151,7 @@ layout: "layouts/base.html"
           <h2  class="cs-title">Who is Lucid Web Designs?</h2>
           <p class="cs-text">
            I'm Toby V, the owner and sole developer of Lucid Web Designs. My journey into programming began after I suffered heatstroke at my physical labor job. Realizing I needed a career that kept me indoors, I decided to teach myself how to code. Over three years, I taught myself to code websites by hand, reaching out to small businesses to offer my help.
-            <span><a class="href-link" href="/about">Learn more about Lucid Web Designs</a></span>
+            <a class="href-link" href="/about" ><span class="sr-only">Learn more about Lucid Web Designs</span>LEARN MORE</a>
           </p>
        </div>
     </div>
@@ -190,7 +184,7 @@ layout: "layouts/base.html"
                           {{ post.data.description }}
                           </p>
                           <!-- <a href="/blog-post/" class="cs-button-solid" onclick="updateTitle('{{ post.data.title }}', event)">READ MORE</a> -->
-                          <a href="{{ post.url }}" class="cs-button-solid">Read more about {{ post.data.title }}</a>
+                          <a href="{{ post.url }}" class="cs-button-solid"><span class="sr-only">Read more about {{ post.data.title }}</span>READ MORE</a>
                       </article>
                   </li>
               {%- endfor %}
