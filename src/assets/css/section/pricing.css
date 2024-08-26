@@ -73,7 +73,7 @@
     align-items: center;
   }
   #pricing .cs-item {
-    width: 100%;
+    width: 80%;
     padding: clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
     /* background-color: rgba(255,255,255,1); */
     background: var(--item-bg);
@@ -116,13 +116,13 @@
     font-size: 3.5em;
   }
   #pricing .cs-package {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 400;
     line-height: 1.2em;
     text-align: inherit;
     text-transform: uppercase;
-    margin: 0 0 0.25rem 0;
-    color: var(--bodyTextColor);
+    margin: 0 0 1rem 0;
+    /* color: var(--bodyTextColor); */
     display: block;
   }
   #pricing .cs-flex-wrapper {
@@ -133,7 +133,6 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    gap: 0.5rem;
     position: relative;
     z-index: 1;
   }
@@ -141,18 +140,16 @@
   #pricing .cs-price {
     font-size: 3em;
     font-weight: 400;
-    line-height: 1.2em;
+    line-height: 1em;
     text-align: inherit;
     margin: 0;
     color: var(--placeholderColor);
   }
-  #pricing .cs-frequency {
-    font-size: 1rem;
-    line-height: 1.5em;
-    text-align: inherit;
-    margin: 0;
-    color: var(--bodyTextColor);
-    display: block;
+  #pricing .cs-item  .cs-frequency {
+    font-size: 1.3rem;
+  }
+    #pricing .cs-item-popular  .cs-frequency {
+    font-size: 1.65rem;
   }
   #pricing .cs-item-text {
     font-size: 1rem;
@@ -162,7 +159,7 @@
     color: var(--bodyTextColor);
   }
   .cs-item-text-popular {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--bodyTextColor);
   }
   .cs-item-header {
@@ -185,7 +182,7 @@
   }
 }
 /* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 60rem) {
   #pricing .cs-container {
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
@@ -203,6 +200,9 @@
   #pricing .cs-card-group {
     gap: 0;
     flex-direction: row;
+    width: 100%;
+    max-width: 60rem;
+    align-items: center;
   }
 
   #pricing .cs-item.cs-popular {
@@ -233,4 +233,43 @@
 
 .cs-item-text, .cs-item-text-popular{
   display: flex;
+}
+
+/* General Styling for cs-package */
+.cs-package {
+  /* font-size: 1.2rem; */
+  font-weight: 700;
+  line-height: 1.4em;
+  text-align: center;
+  text-transform: uppercase;
+  /* margin: 0 0 1rem 0; */
+  /* color: var(--titleTextColor); */
+  color: var(--primary);
+  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Specific Styling for Popular Package */
+.cs-item-popular .cs-package {
+  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  /* color: #333333; */
+  color: var(--primary);
+  font-size: 1.4rem;
+  font-weight: 900;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 157, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 20px rgba(0, 157, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 157, 255, 0.7);
+  }
 }
