@@ -117,7 +117,7 @@
   }
   #pricing .cs-package {
     /* font-size: 1rem; */
-    font-weight: 400;
+    /* font-weight: 400; */
     line-height: 1.2em;
     text-align: inherit;
     text-transform: uppercase;
@@ -238,6 +238,7 @@
 /* General Styling for cs-package */
 .cs-package {
   /* font-size: 1.2rem; */
+  letter-spacing: .05rem;
   font-weight: 700;
   line-height: 1.4em;
   text-align: center;
@@ -246,7 +247,7 @@
   /* color: var(--titleTextColor); */
   color: var(--primary);
   background: linear-gradient(to right, #f5f5f5, #e0e0e0);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 8px;
   display: inline-block;
   transition: background-color 0.3s ease, color 0.3s ease;
