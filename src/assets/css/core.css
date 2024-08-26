@@ -225,7 +225,7 @@ a {
 .container {
   margin-inline: auto;
   /* padding-inline: 0.5em; */
-  max-width: 80rem;
+  /* max-width: 80rem; */
 }
 
 .container--narrow {
@@ -690,9 +690,10 @@ ul {
   font-size: var(--headerFontSize);
   font-weight: 900;
   line-height: 1.2em;
-  text-align: inherit;
+  /* text-align: inherit; */
+  text-align: left;
   max-width: 43.75rem;
-  margin: 1em 0 1rem 0;
+  margin: 0em 0 1rem 0;
   position: relative;
 }
 
@@ -1056,6 +1057,7 @@ main {
         background-image: url("../images/falconHeavyReversed.avif");
         background-size: 100%;
         background-blend-mode: darken;
+        background-size: cover;
     }
 }
 
@@ -1064,6 +1066,7 @@ main {
         background-image: url("../images/falconHeavyReversed-mobile.avif");
         background-size: 250%;
         background-blend-mode: darken;
+        background-size: cover;
     }
 }
 
@@ -1087,8 +1090,9 @@ main {
 .hero__content {
     position: relative;
     z-index: 1;
-    padding-top: 10vh;
-    text-align: center;
+    padding-top: 5vh;
+    /* text-align: center; */
+    text-align: left;
     color: white;
 }
 
