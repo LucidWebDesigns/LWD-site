@@ -173,6 +173,13 @@
             entry.target.classList.add('fade-in-visible');
           } else if (entry.target.classList.contains('slide-in-left')) {
             entry.target.classList.add('slide-in-visible');
+             // Check if the section is the one containing the image to rotate
+            const heroImage = entry.target.querySelector('.hero__image');
+            if (heroImage) {
+              // Wait for the slide-in animation to complete before starting the rotation
+              heroImage.style.transition = 'transform .8s ease-in-out'; // Optional: smooth out the rotation
+              heroImage.style.transform = 'rotate(360deg)';
+            }
           } else if (entry.target.classList.contains('slide-in-right')) {
             entry.target.classList.add('slide-in-visible');
           }

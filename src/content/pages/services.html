@@ -3,6 +3,7 @@ title: 'Services | Lucid Web Designs'
 description: 'Meta description for the page'
 permalink: 'services/'
 preloadImg: '/assets/images/womanbulb.png'
+backgroundColor: "#ddf2f4" 
 eleventyNavigation:
     key: Services
     order: 3100
@@ -18,253 +19,249 @@ layout: "layouts/base.html"
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
 
 
-    <div class="bg-overlay">
-      <h1 class="page-header-title content">Services</h1>
+<div class="bg-overlay">
+  <h1 class="page-header-title content">Services</h1>
+</div>
+
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="side-by-side" class="top-section slide-in-left">
+  <div class="content pt-lg pb-sm">
+  <div class="cs-container">
+    <object
+      class="cs-picture"
+          data="../assets/images/codertoon.svg"
+        ></object>
+    <div class="cs-content">
+      <h2 class="cs-title">Web Design & Development, Reimagined</h2>
+      <p class="cs-text">
+        We don’t use WordPress, frameworks, or page builders. Instead, we hand-code every line, giving us complete control over the design. This ensures your website is lightning fast, free from bloated or messy code.
+      </p>
+      <p class="cs-text">
+        Hand-crafted websites outperform most WordPress sites and drag-and-drop builders, which can cost thousands. In the digital world, speed and precision make all the difference.
+      </p>
     </div>
+  </div>
+  </div>
+</section>
 
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-  <!--                 Side By Side                 -->
+<section id="side-by-side" class="slide-in-right">
+  <div class="content pt-sm pb-lg">
+  <div class="cs-container">
+    
+    <div class="cs-content">
+      <h2 class="cs-title">SEO for <script>
+      document.write(new Date().getFullYear());
+    </script></h2>
+      <p class="cs-text">
+        Promises of front-page Google results in 3 months? Beware. Unless you’ve been featured by The New York Times, it can take years to rank at the top.
+      </p>
+      <p class="cs-text">
+        We offer cutting-edge SEO techniques for <script>
+      document.write(new Date().getFullYear());
+    </script>:
+      </p>
+      <ul class="cs-card-group">
+        <li class="cs-li">
+          <div class="cs-flex">
+            <p><span class="checkmark">&#x2713;</span> Content and Blogs Tailored by Keywords</p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <div class="cs-flex">
+            <p><span class="checkmark">&#x2713;</span> Seamless Mobile-First Experience</p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <div class="cs-flex">
+            <p><span class="checkmark">&#x2713;</span> Pristine Code for Enhanced Web Crawling</p>
+          </div>
+        </li>
+        <li class="cs-li">
+          <div class="cs-flex">
+            <p><span class="checkmark">&#x2713;</span> Responsive Design for All Devices</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <object
+      class="cs-picture"
+          data="../assets/images/seotune.svg"
+    ></object>
+  </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services" class="fade-in">
+  <div class="content pt-lg pb-lg">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">Lifetime Website Updates</h2>
+      <p class="cs-text">
+        Google frequently updates its search algorithm standards, and web accessibility guidelines evolve as well. With our service, your website receives lifetime updates to ensure it stays current and adapts to the latest changes. Always up-to-date, always optimized.
+      </p>
+      <a href="/contact/#faq" class="cs-button-solid" aria-label="learn more about us"
+        >Learn More</a
+      >
+    </div>
+    <div class="cs-wrapper">
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <h3 class="cs-h3">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                src="../assets/images/rotate-square.svg"
+                alt="svg icon"
+                width="37"
+                height="29"
+                loading="lazy"
+                decoding="async"
+              />
+            Design Refresh
+          </h3>
+          <p class="cs-item-text">
+            Want a fresh look? We’ll rebuild your website at no extra cost.
+          </p>
+        </li>
+        <li class="cs-item">
+          <h3 class="cs-h3">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                src="../assets/images/wheelchair.svg"
+                alt="svg icon"
+                width="37"
+                height="29"
+                loading="lazy"
+                decoding="async"
+              />
+            Accessible for All
+          </h3>
+          <p class="cs-item-text">
+            Always compliant with the latest web accessibility standards.
+          </p>
+        </li>
+        <li class="cs-item">
+          <h3 class="cs-h3">
+
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                src="../assets/images/discover.svg"
+                alt="svg icon"
+                width="37"
+                height="29"
+                loading="lazy"
+                decoding="async"
+              />
+
+            SEO Ready
+          </h3>
+          <p class="cs-item-text">
+            Your website stays updated with Google’s search ranking guidelines.
+          </p>
+        </li>
+        <li class="cs-item">
+          <h3 class="cs-h3">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                src="../assets/images/chart-user.svg"
+                alt="svg icon"
+                width="37"
+                height="29"
+                loading="lazy"
+                decoding="async"
+              />
+              Business Profile Excellence
+          </h3>
+          <p class="cs-item-text">
+            We optimize and manage your Google, Bing, and Yahoo business profiles.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                P R I C I N G                 -->
   <!-- ============================================ -->
 
-  <section id="side-by-side" class="top-section white-bg slide-in-left">
-    <div class="content pt-lg pb-sm">
+<section id="pricing" class="pt-md">
+  <div class="content">
     <div class="cs-container">
-      <object
-       class="cs-picture"
-            data="../assets/images/codertoon.svg"
-          ></object>
-      <div class="cs-content">
-        <h2 class="cs-title">Web Design & Development, Reimagined</h2>
-        <p class="cs-text">
-          We don’t use WordPress, frameworks, or page builders. Instead, we hand-code every line, giving us complete control over the design. This ensures your website is lightning fast, free from bloated or messy code.
-        </p>
-        <p class="cs-text">
-          Hand-crafted websites outperform most WordPress sites and drag-and-drop builders, which can cost thousands. In the digital world, speed and precision make all the difference.
-        </p>
-      </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!--             Side By Side Reverse             -->
-  <!-- ============================================ -->
-
-  <section id="side-by-side" class="white-bg slide-in-right">
-    <div class="content pt-sm pb-lg">
-    <div class="cs-container">
-     
-      <div class="cs-content">
-        <h2 class="cs-title">SEO for <script>
-        document.write(new Date().getFullYear());
-      </script></h2>
-        <p class="cs-text">
-          Promises of front-page Google results in 3 months? Beware. Unless you’ve been featured by The New York Times, it can take years to rank at the top.
-        </p>
-        <p class="cs-text">
-         We offer cutting-edge SEO techniques for <script>
-        document.write(new Date().getFullYear());
-      </script>:
-        </p>
-        <ul class="cs-card-group">
-          <li class="cs-li">
-            <div class="cs-flex">
-              <p><span class="checkmark">&#x2713;</span> Content and Blogs Tailored by Keywords</p>
-            </div>
-          </li>
-          <li class="cs-li">
-            <div class="cs-flex">
-              <p><span class="checkmark">&#x2713;</span> Seamless Mobile-First Experience</p>
-            </div>
-          </li>
-          <li class="cs-li">
-            <div class="cs-flex">
-              <p><span class="checkmark">&#x2713;</span> Pristine Code for Enhanced Web Crawling</p>
-            </div>
-          </li>
-          <li class="cs-li">
-            <div class="cs-flex">
-              <p><span class="checkmark">&#x2713;</span> Responsive Design for All Devices</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <object
-       class="cs-picture"
-            data="../assets/images/seotune.svg"
-      ></object>
-    </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!--                   Services                   -->
-  <!-- ============================================ -->
-
-  <section id="services" class="white-bg fade-in">
-    <div class="content pt-lg pb-lg">
-    <div class="cs-container">
-      <div class="cs-content">
-        <h2 class="cs-title">Lifetime Website Updates</h2>
-        <p class="cs-text">
-          Google frequently updates its search algorithm standards, and web accessibility guidelines evolve as well. With our service, your website receives lifetime updates to ensure it stays current and adapts to the latest changes. Always up-to-date, always optimized.
-        </p>
-        <a href="/contact/#faq" class="cs-button-solid" aria-label="learn more about us"
-          >Learn More</a
-        >
-      </div>
       <div class="cs-wrapper">
         <ul class="cs-card-group">
-          <li class="cs-item">
-            <h3 class="cs-h3">
-                <img
-                  class="cs-icon"
-                  aria-hidden="true"
-                  src="../assets/images/rotate-square.svg"
-                  alt="svg icon"
-                  width="37"
-                  height="29"
-                  loading="lazy"
-                  decoding="async"
-                />
-              Design Refresh
-            </h3>
-            <p class="cs-item-text">
-              Want a fresh look? We’ll rebuild your website at no extra cost.
-            </p>
+          <!-- Essential Package -->
+          <li class="cs-item slide-in-left">
+            <span class="cs-package">Essential Package</span>
+            <div class="cs-flex-wrapper">
+              <span class="cs-price">$100</span>
+              <span class="cs-frequency">/MO</span>
+            </div>
+            <ul class="cs-price-details">
+              <li class="cs-item-text"><span>&#x2714;</span>Basic Maintenance</li>
+              <li class="cs-item-text"><span>&#x2714;</span>Up to 1 Hour of Content Updates/Month</li>
+              <li class="cs-item-text"><span>&#x2714;</span>Basic SEO Setup</li>
+              <li class="cs-item-text"><span>&#x2714;</span>Email Support (48-Hour Response Time)</li>
+            </ul>
+            <a href="/contact" class="cs-button-solid cs-price-button">CONTACT US</a>
           </li>
-          <li class="cs-item">
-            <h3 class="cs-h3">
-                <img
-                  class="cs-icon"
-                  aria-hidden="true"
-                  src="../assets/images/wheelchair.svg"
-                  alt="svg icon"
-                  width="37"
-                  height="29"
-                  loading="lazy"
-                  decoding="async"
-                />
-              Accessible for All
-            </h3>
-            <p class="cs-item-text">
-              Always compliant with the latest web accessibility standards.
-            </p>
-          </li>
-          <li class="cs-item">
-            <h3 class="cs-h3">
 
-                <img
-                  class="cs-icon"
-                  aria-hidden="true"
-                  src="../assets/images/discover.svg"
-                  alt="svg icon"
-                  width="37"
-                  height="29"
-                  loading="lazy"
-                  decoding="async"
-                />
-
-              SEO Ready
-            </h3>
-            <p class="cs-item-text">
-              Your website stays updated with Google’s search ranking guidelines.
-            </p>
+          <!-- Standard Package -->
+          <li class="cs-item-popular cs-popular slide-in-right">
+            <span class="cs-package">Standard Package</span>
+            <div class="cs-flex-wrapper">
+              <span class="cs-price">$200</span>
+              <span class="cs-frequency">/MO</span>
+            </div>
+            <ul class="cs-price-details">
+              <li class="cs-item-text-popular"><span>&#x2714;</span>Enhanced Maintenance & Security</li>
+              <li class="cs-item-text-popular"><span>&#x2714;</span>Up to 2 Hours of Content Updates/Month</li>
+              <li class="cs-item-text-popular"><span>&#x2714;</span>Basic SEO Maintenance</li>
+              <li class="cs-item-text-popular"><span>&#x2714;</span>Email & Phone Support (24-Hour Response Time)</li>
+            </ul>
+            <a href="/contact" class="cs-button-solid cs-price-button">CONTACT US</a>
           </li>
-          <li class="cs-item">
-            <h3 class="cs-h3">
-                <img
-                  class="cs-icon"
-                  aria-hidden="true"
-                  src="../assets/images/chart-user.svg"
-                  alt="svg icon"
-                  width="37"
-                  height="29"
-                  loading="lazy"
-                  decoding="async"
-                />
-               Business Profile Excellence
-            </h3>
-            <p class="cs-item-text">
-              We optimize and manage your Google, Bing, and Yahoo business profiles.
-            </p>
+
+          <!-- Advanced Package -->
+          <li class="cs-item slide-in-left">
+            <span class="cs-package">Advanced Package</span>
+            <div class="cs-flex-wrapper">
+              <span class="cs-price">$350</span>
+              <span class="cs-frequency">/MO</span>
+            </div>
+            <ul class="cs-price-details">
+              <li class="cs-item-text"><span>&#x2714;</span>Comprehensive Site Management</li>
+              <li class="cs-item-text"><span>&#x2714;</span>Up to 4 Hours of Content Updates/Month</li>
+              <li class="cs-item-text"><span>&#x2714;</span>SEO Monitoring & Optimization</li>
+              <li class="cs-item-text"><span>&#x2714;</span>Priority Support (Same-Day Response Time)</li>
+            </ul>
+            <a href="/contact" class="cs-button-solid cs-price-button">CONTACT US</a>
           </li>
         </ul>
       </div>
     </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!--                P R I C I N G                 -->
-  <!-- ============================================ -->
-
-    <section id="pricing" class="pt-lg white-bg ">
-    <div class="content">
-    <div class="cs-container">
-      <div class="cs-wrapper">
-        <ul class="cs-card-group">
-          <li class="cs-item slide-in-left">
-            <span class="cs-package">$900 down</span>
-            <div class="cs-flex-wrapper">
-              <span class="cs-price">$99.99</span>
-              <span class="cs-frequency"> /MO </span>
-            </div>
-              <ul class="cs-price-details">
-              <li class="cs-item-text"><span>&#x2714;</span>$50 per Edit</li>
-              <li class="cs-item-text"><span>&#x2714;</span>Includes Hosting</li>
-              <li class="cs-item-text"><span>&#x2714;</span>24/7 Customer Service</li>
-              <li class="cs-item-text"><span>&#x2714;</span>Lifetime Updates</li>
-             </ul>
-            <a href="/contact" class="cs-button-solid cs-price-button"
-              >CONTACT US</a
-            >
-          </li>
-          <li class="cs-item cs-popular slide-in-right">
-            <span class="cs-package">$0 down</span>
-            <div class="cs-flex-wrapper">
-              <span class="cs-price">$199.99</span>
-              <span class="cs-frequency"> /MO </span>
-            </div>
-            <p class="cs-item-text">
-             <ul class="cs-price-details">
-              <li class="cs-item-text-popular"><span>&#x2714;</span>Unlimited Edits</li>
-              <li class="cs-item-text-popular"><span>&#x2714;</span>Includes Hosting</li>
-              <li class="cs-item-text-popular"><span>&#x2714;</span>24/7 Customer Service</li>
-              <li class="cs-item-text-popular"><span>&#x2714;</span>Lifetime Updates</li>
-             </ul>
-            </p>
-
-            <a href="/contact" class="cs-button-solid cs-price-button"
-              >CONTACT US</a
-            >
-          </li>
-          <li class="cs-item slide-in-left">
-            <span class="cs-package">$1800 down</span>
-            <div class="cs-flex-wrapper">
-              <span class="cs-price">$24.99</span>
-              <span class="cs-frequency"> /MO </span>
-            </div>
-              <ul class="cs-price-details">
-              <li class="cs-item-text"><span>&#x2714;</span>$100 per Edit</li>
-              <li class="cs-item-text"><span>&#x2714;</span>Includes Hosting</li>
-              <li class="cs-item-text"><span>&#x2714;</span>24/7 Customer Service</li>
-              <li class="cs-item-text"><span>&#x2714;</span>Lifetime Updates</li>
-             </ul>
-            <a href="/contact" class="cs-button-solid cs-price-button"
-              >CONTACT US</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 {% endblock %}

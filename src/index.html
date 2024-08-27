@@ -4,7 +4,7 @@ description: 'Lucid Web Designs, based in Austin, TX, specializes in handcrafted
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 preloadImg: '/assets/images/falconHeavyReversed.avif'
-backgroundColor: "#ddf2f4"  # Light grey for the home page
+backgroundColor: "#ddf2f4" 
 eleventyNavigation:
   key: Home
   order: 100
@@ -42,7 +42,7 @@ layout: "layouts/base.html"
             No page builders. No WordPress. Just 100% hand-coded websites. Superior results starting at $200/month.
           </p>
           <div class="flex-group">
-            <a href="/contact" class="cs-button-solid">GET IN TOUCH!</a>
+            <a href="/contact#contact" class="cs-button-solid">GET IN TOUCH!</a>
           </div>
         </div>
       <!-- </div>
@@ -119,7 +119,7 @@ layout: "layouts/base.html"
     </div>
   </section>
 
-  <section id="side-by-side" class="pb-lg slide-in-right">
+  <section id="side-by-side" class="pb-lg pt-lg slide-in-right">
     <div class="content">
     <div class="cs-container">
       <object
@@ -152,28 +152,25 @@ layout: "layouts/base.html"
     </div>
   </section>
 
-  <section id="hero-2" class="content fade-in pb-md">
-    <div class="cs-content-container ">
-        <div id="excellence-content" class="cs-content pt-lg pb-lg">
-          <h2  class="cs-title">Who is Lucid Web Designs?</h2>
-          <p class="cs-text">
-           I'm Toby V, the owner and sole developer of Lucid Web Designs. My journey into programming began after I suffered heatstroke at my physical labor job. Realizing I needed a career that kept me indoors, I decided to teach myself how to code. Over three years, I taught myself to code websites by hand, reaching out to small businesses to offer my help.
-            <a class="href-link" href="/about" ><span class="sr-only">Learn more about Lucid Web Designs</span>LEARN MORE</a>
-          </p>
-       </div>
+  <section id="hero-2" class="content slide-in-left pb-lg pt-lg">
+    <div class="cs-content-container">
+      <div id="excellence-content" class="cs-content pt-lg pb-lg">
+        <h2 class="cs-title">Who is Lucid Web Designs?</h2>
+        <p class="cs-text">
+          I'm Toby V, the owner and sole developer of Lucid Web Designs. My journey into programming began after I suffered heatstroke at my physical labor job. Realizing I needed a career that kept me indoors, I decided to teach myself how to code. Over three years, I taught myself to code websites by hand, reaching out to small businesses to offer my help.
+          <a class="href-link" href="/about"><span class="sr-only">Learn more about Lucid Web Designs</span>LEARN MORE</a>
+        </p>
+      </div>
     </div>
     <div>
-         <img src="./assets/images/pictureOfMe.png" alt="" class="hero__image">
-      </div>
+      <img src="./assets/images/pictureOfMe.png" alt="" class="hero__image">
+    </div>
   </section>
+
   
   <section id="featured-articles" class="pt-lg pb-lg fade-in">
-    <div class="">
     <div class="container flow">
       <h3 class="section-title text-center text-title-dark pb-sm">Featured articles</h3>
-      <p id="featured-articles" class="text-center pb-md">
-        Here are some sample articles that capture the essence of what our site offers. Dive in to get a clear understanding of our focus and expertise.
-      </p>
       <div class="articles__carousel">
         <ul role="list" class="articles__list ">
           {%- for post in collections.featured | reverse -%} 
@@ -197,7 +194,6 @@ layout: "layouts/base.html"
               {%- endfor %}
         </ul>
       </div>
-    </div>
     </div>
   </section>
 

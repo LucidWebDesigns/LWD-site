@@ -127,6 +127,7 @@ ol:where([role="list"]) {
 html:focus-within {
   scroll-behavior: smooth;
 }
+ html { scroll-behavior: smooth; }
 
 /* Set core body defaults */
 body {
@@ -368,9 +369,10 @@ a {
   /* box-sizing: border-box;
   box-shadow: var(--neomorph-btn) */
   border-radius: 0.5em;
-  background: linear-gradient(145deg, #28a4f2, #0094d8);
+  background: linear-gradient(125deg, #72e7ff, #028ac9);
   /* box-shadow:  3px 3px 5px rgba(0, 0, 0, .5),
               3px -3px 5px rgba(255, 255, 255, .5); */
+  box-shadow: var(--neomorph-btn);
 }
 .cs-button-solid:before,
 .cs-button-solid:before {
@@ -1141,7 +1143,3 @@ main {
     transform: scale(1.1); /* Slightly enlarges to create a pulsing effect */
   }
 }
-
-
-
-
