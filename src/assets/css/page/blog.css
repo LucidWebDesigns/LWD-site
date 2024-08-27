@@ -53,10 +53,10 @@
   position: relative;
   height: 500px;
   
-  background: rgba(0,0,0,0);
+  /* background: rgba(0,0,0,0);
   box-shadow: inset 7px 7px 14px #afbec0,
-          inset -7px -7px 14px #ffffff;
-  border-radius: 2em;
+          inset -7px -7px 14px #ffffff; */
+  /* border-radius: 2em; */
 }
 
 /* Blog snippets list */
@@ -93,7 +93,9 @@
 
 
 
-
+#featured-articles {
+  min-width: 100vw;
+}
 #featured-articles .snippet {
   background-color: var(--text-bg);
   display: flex;

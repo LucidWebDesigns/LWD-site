@@ -4,6 +4,7 @@ description: 'Lucid Web Designs, based in Austin, TX, specializes in handcrafted
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 preloadImg: '/assets/images/falconHeavyReversed.avif'
+backgroundColor: "#ddf2f4"  # Light grey for the home page
 eleventyNavigation:
   key: Home
   order: 100
@@ -53,7 +54,7 @@ layout: "layouts/base.html"
   <!--                    Hero                      -->
   <!-- ============================================ -->
 
-  <section id="hero" class="white-bg pt-md fade-in">
+  <section id="hero" class="pt-md fade-in">
     <div class="content pt-md">
     <div class="cs-container">
 
@@ -118,7 +119,7 @@ layout: "layouts/base.html"
     </div>
   </section>
 
-  <section id="side-by-side" class="white-bg pb-lg slide-in-right">
+  <section id="side-by-side" class="pb-lg slide-in-right">
     <div class="content">
     <div class="cs-container">
       <object
@@ -151,7 +152,7 @@ layout: "layouts/base.html"
     </div>
   </section>
 
-  <section id="hero-2" class="white-bg content fade-in pb-md">
+  <section id="hero-2" class="content fade-in pb-md">
     <div class="cs-content-container ">
         <div id="excellence-content" class="cs-content pt-lg pb-lg">
           <h2  class="cs-title">Who is Lucid Web Designs?</h2>
@@ -166,8 +167,8 @@ layout: "layouts/base.html"
       </div>
   </section>
   
-  <section id="featured-articles" class="white-bg pt-lg pb-lg fade-in">
-    <div class="content">
+  <section id="featured-articles" class="pt-lg pb-lg fade-in">
+    <div class="">
     <div class="container flow">
       <h3 class="section-title text-center text-title-dark pb-sm">Featured articles</h3>
       <p id="featured-articles" class="text-center pb-md">
@@ -200,7 +201,13 @@ layout: "layouts/base.html"
     </div>
   </section>
 
-<section id="pricing" class="pt-lg white-bg">
+<div class="section-heading fade-in">
+  <div class="icon">
+    <img src="./assets/images/bulb.svg" alt="Icon representing pricing">
+  </div>
+</div>
+
+<section id="pricing" class="">
   <div class="content">
     <div class="cs-container">
       <div class="cs-wrapper">
@@ -214,7 +221,6 @@ layout: "layouts/base.html"
             </div>
             <ul class="cs-price-details">
               <li class="cs-item-text"><span>&#x2714;</span>Basic Maintenance</li>
-              <li class="cs-item-text"><span>&#x2714;</span>Reliable Hosting</li>
               <li class="cs-item-text"><span>&#x2714;</span>Up to 1 Hour of Content Updates/Month</li>
               <li class="cs-item-text"><span>&#x2714;</span>Basic SEO Setup</li>
               <li class="cs-item-text"><span>&#x2714;</span>Email Support (48-Hour Response Time)</li>
@@ -231,7 +237,6 @@ layout: "layouts/base.html"
             </div>
             <ul class="cs-price-details">
               <li class="cs-item-text-popular"><span>&#x2714;</span>Enhanced Maintenance & Security</li>
-              <li class="cs-item-text-popular"><span>&#x2714;</span>Upgraded Hosting</li>
               <li class="cs-item-text-popular"><span>&#x2714;</span>Up to 2 Hours of Content Updates/Month</li>
               <li class="cs-item-text-popular"><span>&#x2714;</span>Basic SEO Maintenance</li>
               <li class="cs-item-text-popular"><span>&#x2714;</span>Email & Phone Support (24-Hour Response Time)</li>
@@ -248,7 +253,6 @@ layout: "layouts/base.html"
             </div>
             <ul class="cs-price-details">
               <li class="cs-item-text"><span>&#x2714;</span>Comprehensive Site Management</li>
-              <li class="cs-item-text"><span>&#x2714;</span>Premium Hosting</li>
               <li class="cs-item-text"><span>&#x2714;</span>Up to 4 Hours of Content Updates/Month</li>
               <li class="cs-item-text"><span>&#x2714;</span>SEO Monitoring & Optimization</li>
               <li class="cs-item-text"><span>&#x2714;</span>Priority Support (Same-Day Response Time)</li>

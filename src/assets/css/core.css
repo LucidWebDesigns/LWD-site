@@ -1106,3 +1106,42 @@ main {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 0 0 0;
+}
+
+.section-heading .icon img {
+  width: 75px; /* Adjust size as needed */
+  margin-right: 1em;
+}
+
+.section-heading h2 {
+  font-weight: 800;
+  font-size: 2.5em;
+  color: var(--primary-dark);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.icon img {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.25);
+    transform: scale(1.1); /* Slightly enlarges to create a pulsing effect */
+  }
+}
+
+
+
+
