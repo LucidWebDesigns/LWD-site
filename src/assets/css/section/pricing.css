@@ -74,7 +74,7 @@
   }
   #pricing .cs-item {
     width: 80%;
-    padding: clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
+    /* padding: clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem); */
     /* background-color: rgba(255,255,255,1); */
     background: var(--item-bg);
     box-sizing: border-box;
@@ -87,10 +87,11 @@
     margin: 1.5rem 0;
     box-shadow: var(--neomorph);
     border: 1px solid rgba(0,0,0,.15);
+    overflow: hidden;
   }
     #pricing .cs-item-popular {
     width: 100%;
-    padding: clamp(2.2rem, 2.2vw, 2.75rem) clamp(1.1rem, 1.65vw, 2.2rem);
+    /* padding: clamp(2.2rem, 2.2vw, 2.75rem) clamp(1.1rem, 1.65vw, 2.2rem); */
     /* background-color: rgba(255,255,255,1); */
     background: var(--item-bg);
     box-sizing: border-box;
@@ -105,6 +106,13 @@
     border: 1px solid rgba(0,0,0,.15);
     z-index: 1;
     font-size: 1.1em;
+    overflow: hidden;
+  }
+  #pricing .cs-item-container {
+    padding:0  clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
+  }
+  #pricing .cs-item-container-popular {
+    padding:0 clamp(2.2rem, 2.2vw, 2.75rem) clamp(1.1rem, 1.65vw, 2.2rem);
   }
   #pricing .cs-item .cs-price,
   #pricing .cs-item-popular .cs-price,
@@ -166,7 +174,7 @@
     color: var(--titleTextColor);
   }
   #pricing .cs-button-solid {
-    margin: 2rem 0 0 0;
+    margin: 2rem  0 ;
   }
   #pricing .cs-graphic {
     width: 100%;
@@ -247,30 +255,77 @@
   text-transform: uppercase;
   /* margin: 0 0 1rem 0; */
   background: linear-gradient(to right, #f5f5f5, #e0e0e0);
-  padding: 0.5rem;
-  border-radius: 8px;
+  padding: 0.75rem;
+  /* border-radius: 8px; */
   display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
   border: 1px solid rgba(0, 157, 255, .3);
   width: 100%;
+  
 }
 
 /* Specific Styling for Popular Package */
 .cs-item-popular .cs-package {
-  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  background: var(--primary);
+  color: white;
   font-size: 1rem;
   font-weight: 900;
-  animation: pulse 2s infinite;
+  /* animation: pulse 2s infinite; */
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 5px rgba(0, 157, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 157, 255, 0.7);
   }
   70% {
-    box-shadow: 0 0 10px rgba(0, 157, 255, 1);
+    box-shadow: 0 10px 10px rgba(0, 157, 255, .5);
   }
   100% {
-    box-shadow: 0 0 5px rgba(0, 157, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 157, 255, 0.7);
   }
+}
+/* Centering cs-package */
+.cs-package {
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.4em;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  padding: 0.75rem;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid rgba(0, 157, 255, .3);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Centering button within cs-item */
+#pricing .cs-item,
+#pricing .cs-item-popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* Center children horizontally */
+  text-align: center; /* Center text */
+  border-radius: 15px;
+  margin: 1.5rem 0;
+  box-shadow: var(--neomorph);
+  border: 1px solid rgba(0,0,0,.15);
+  overflow: hidden;
+}
+
+#pricing .cs-item-container,
+#pricing .cs-item-container-popular {
+  padding: 0 clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center contents inside the container */
+}
+
+.cs-price-button {
+  margin: 2rem 0;
+  display: inline-block;
+  text-align: center;
+  /* Additional button styling if necessary */
 }
