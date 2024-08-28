@@ -226,19 +226,21 @@
     min-height: 25rem;
   }
 }
-.cs-item-text span, .cs-item-text-popular span {
+.cs-item-text .fa-circle-check, .cs-item-text-popular .fa-circle-check {
   color: var(--primary);
   margin-right: .75em;
+  align-self: center;
 }
 
 .cs-item-text, .cs-item-text-popular{
   display: flex;
+  color: var(--bodyTextColor);
 }
 
 /* General Styling for cs-package */
 .cs-package {
-  /* font-size: 1.2rem; */
-  letter-spacing: .05rem;
+  font-size: .9rem;
+  /* letter-spacing: .05rem;  */
   font-weight: 700;
   line-height: 1.4em;
   text-align: center;
@@ -247,15 +249,16 @@
   background: linear-gradient(to right, #f5f5f5, #e0e0e0);
   padding: 0.5rem;
   border-radius: 8px;
-  display: inline-block;
+  display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
   border: 1px solid rgba(0, 157, 255, .3);
+  width: 100%;
 }
 
 /* Specific Styling for Popular Package */
 .cs-item-popular .cs-package {
   background: linear-gradient(to right, #f5f5f5, #e0e0e0);
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 900;
   animation: pulse 2s infinite;
 }
