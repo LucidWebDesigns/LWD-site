@@ -259,7 +259,7 @@
   /* border-radius: 8px; */
   display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border: 1px solid rgba(0, 157, 255, .3);
+  border-bottom: 1px solid rgba(0, 157, 255, .3);
   width: 100%;
   
 }
@@ -295,7 +295,7 @@
   padding: 0.75rem;
   display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border: 1px solid rgba(0, 157, 255, .3);
+  border-bottom: 1px solid rgba(0, 157, 255, .3);
   width: 100%;
   box-sizing: border-box;
 }
@@ -317,7 +317,7 @@
 
 #pricing .cs-item-container,
 #pricing .cs-item-container-popular {
-  padding: 0 clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
+  padding: 0 clamp(2rem, 2vw, 2.5rem) 0;
   display: flex;
   flex-direction: column;
   align-items: center; /* Center contents inside the container */

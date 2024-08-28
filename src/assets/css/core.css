@@ -369,7 +369,7 @@ a {
   /* box-sizing: border-box;
   box-shadow: var(--neomorph-btn) */
   border-radius: 0.5em;
-  background: linear-gradient(125deg, #72e7ff, #028ac9);
+  background: linear-gradient(125deg, var(--primary), #026592);
   /* box-shadow:  3px 3px 5px rgba(0, 0, 0, .5),
               3px -3px 5px rgba(255, 255, 255, .5); */
   box-shadow: var(--neomorph-btn);
