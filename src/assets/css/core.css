@@ -38,7 +38,7 @@ background: linear-gradient(90deg, rgba(255,252,248,1) 0%, rgba(255,251,244,1) 1
   /* 31px - 49px */
   --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
   --headerFontSizeSm: clamp(1.9375rem, 2.9vw, 3.0625rem);
-  --bodyFontSize: 1.05rem;
+  --bodyFontSize: 1.0625rem;
   /* 60px - 100px top and bottom */
   --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 
@@ -715,7 +715,6 @@ ul {
 }
 
 .cs-text {
-  font-size: var(--bodyFontSize);
   color: var(--bodyTextColor);
   line-height: 1.75em;
   text-align: inherit;
