@@ -1009,7 +1009,7 @@ iframe {
 /* Fade-In */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
