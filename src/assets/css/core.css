@@ -835,7 +835,7 @@ font sizes, styles
 }
 
 #excellence-content,
-#featured-articles,
+/* #featured-articles, */
 #crafted-content {
   text-align: center;
   max-width: 650px;

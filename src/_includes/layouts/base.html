@@ -141,22 +141,33 @@
 
     <!-- START CAROSEL -->
     <script>
-       document.addEventListener("DOMContentLoaded", function () {
-        const carousel = document.querySelector(".articles__list");
-        const items = carousel.children;
-        const totalItems = items.length;
+       const carousel = document.querySelector('.articles__list');
+      const items = document.querySelectorAll('.articles__list li');
+      const scrollAmount = items[0].offsetWidth + parseInt(window.getComputedStyle(items[0]).marginRight);
+      let currentIndex = 0;
 
-        // Clone the carousel items
-        for (let i = 0; i < totalItems*3; i++) {
-          const clone = items[i].cloneNode(true);
-          carousel.appendChild(clone);
+      document.getElementById('scroll-left').addEventListener('click', function() {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = items.length - 1;
         }
+        carousel.scrollTo({
+          left: currentIndex * scrollAmount,
+          behavior: 'smooth'
+        });
+      });
 
-        // Adjust the speed of the scroll based on the number of items
-        const totalWidth = totalItems * (300 + 2 * parseInt(getComputedStyle(items[0]).marginRight)); // Adjust width based on item size and margin
-        carousel.style.width = `${totalWidth}px`;
-        const speed = 30 * totalItems / 4;
-        carousel.style.animationDuration = `${speed}s`;
+      document.getElementById('scroll-right').addEventListener('click', function() {
+        if (currentIndex < items.length - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        carousel.scrollTo({
+          left: currentIndex * scrollAmount,
+          behavior: 'smooth'
+        });
       });
     </script>
   <script>
