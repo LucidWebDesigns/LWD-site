@@ -146,6 +146,8 @@
       const scrollAmount = items[0].offsetWidth + parseInt(window.getComputedStyle(items[0]).marginRight);
       let currentIndex = 0;
 
+      
+
       document.getElementById('scroll-left').addEventListener('click', function() {
         if (currentIndex > 0) {
           currentIndex--;
@@ -169,6 +171,33 @@
           behavior: 'smooth'
         });
       });
+      document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.articles__list');
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+            carousel.style.scrollSnapType = 'none'; // Disable snap while dragging
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.touches[0].pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 2; // The *2 factor controls the scroll speed
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+
+        carousel.addEventListener('touchend', () => {
+            isDragging = false;
+            carousel.style.scrollSnapType = 'x mandatory'; // Re-enable snap after dragging
+        });
+    });
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
