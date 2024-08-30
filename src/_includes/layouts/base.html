@@ -170,6 +170,23 @@
         });
       });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.articles__list');
+        const hammer = new Hammer(carousel);
+
+        hammer.on('swipeleft', function() {
+            // Move to the next slide
+            document.getElementById('scroll-right').click();
+        });
+
+        hammer.on('swiperight', function() {
+            // Move to the previous slide
+            document.getElementById('scroll-left').click();
+        });
+    });
+    </script>
   <script>
     const observerOptions = {
       root: null, // Use the viewport as the root
