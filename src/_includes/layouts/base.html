@@ -79,16 +79,35 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.articles__list');
-    const items = document.querySelectorAll('.articles__list li');
+    const items = Array.from(document.querySelectorAll('.articles__list li'));
     const scrollAmount = items[0].offsetWidth + parseInt(window.getComputedStyle(items[0]).marginRight);
     let currentIndex = 0;
 
+    // Clone first and last items for infinite scrolling
+    const firstClone = items[0].cloneNode(true);
+    const lastClone = items[items.length - 1].cloneNode(true);
+    carousel.appendChild(firstClone);
+    carousel.insertBefore(lastClone, items[0]);
+
+    const allItems = document.querySelectorAll('.articles__list li');
+
     // Function to smoothly scroll to the nearest item
-    function scrollToCurrentIndex() {
+    function scrollToCurrentIndex(immediate = false) {
         carousel.scrollTo({
             left: currentIndex * scrollAmount,
-            behavior: 'smooth'
+            behavior: immediate ? 'auto' : 'smooth'
         });
+    }
+
+    // Adjust currentIndex and jump when needed (for infinite scrolling)
+    function adjustIndexForInfiniteScroll() {
+        if (currentIndex === 0) {
+            currentIndex = items.length; // Jump to the last original item
+            scrollToCurrentIndex(true);
+        } else if (currentIndex === allItems.length - 1) {
+            currentIndex = 1; // Jump to the first original item
+            scrollToCurrentIndex(true);
+        }
     }
 
     // Handle left arrow click
@@ -96,19 +115,21 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentIndex > 0) {
             currentIndex--;
         } else {
-            currentIndex = items.length - 1;
+            currentIndex = allItems.length - 1;
         }
         scrollToCurrentIndex();
+        setTimeout(adjustIndexForInfiniteScroll, 500); // Adjust index after animation
     });
 
     // Handle right arrow click
     document.getElementById('scroll-right').addEventListener('click', function() {
-        if (currentIndex < items.length - 1) {
+        if (currentIndex < allItems.length - 1) {
             currentIndex++;
         } else {
             currentIndex = 0;
         }
         scrollToCurrentIndex();
+        setTimeout(adjustIndexForInfiniteScroll, 500); // Adjust index after animation
     });
 
     // Initialize Hammer.js for touch and drag functionality
@@ -134,10 +155,16 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollToCurrentIndex();
         setTimeout(() => {
             carousel.style.scrollSnapType = 'x mandatory'; // Re-enable snap after dragging
+            adjustIndexForInfiniteScroll(); // Adjust index after snap
         }, 50); // Small delay for smoother snapping
     });
+
+    // Initial scroll to the first item (considering the cloned element)
+    currentIndex = 1;
+    scrollToCurrentIndex(true);
 });
 </script>
+
 
 
   <script>
