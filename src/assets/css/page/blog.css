@@ -233,6 +233,7 @@
     transition: .5s;
     opacity: .5;
     outline: none;
+    touch-action: manipulation;
   }
 
   #scroll-left:hover, #scroll-right:hover {
