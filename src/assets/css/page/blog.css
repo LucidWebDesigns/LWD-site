@@ -45,6 +45,7 @@
   display: flex;
   /* scroll-snap-type: x mandatory smooth; */
   padding: 1em;
+  border-radius: 15px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   position: relative;
@@ -59,6 +60,8 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   position: relative;
+  box-shadow: var(--neomorph);
+
 }
 
 /* Each list item in the carousel */
@@ -82,7 +85,6 @@
   padding: 2em;
   height: 100%; /* Ensure equal height for all snippets */
   position: relative;
-  box-shadow: inset var(--neomorph);
 }
 #blog-page .blog-feature-container {
   box-shadow: var(--neomorph);
@@ -238,10 +240,10 @@
     margin: 0;
   }
 
-  #scroll-left:hover, #scroll-right:hover {
+  /* #scroll-left:hover, #scroll-right:hover {
     background-color: var(--primary);
     opacity: .15;
-  }
+  } */
 }
 @media (min-width: 1021px) {
   #featured-articles .snippet {
