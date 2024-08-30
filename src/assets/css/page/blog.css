@@ -43,7 +43,7 @@
 /* Container for the carousel */
 .articles__carousel {
   display: flex;
-  scroll-snap-type: x mandatory;
+  /* scroll-snap-type: x mandatory smooth; */
   padding: 1em;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Hide scrollbar for Firefox */
