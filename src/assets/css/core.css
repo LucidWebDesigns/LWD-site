@@ -1109,11 +1109,48 @@ main {
 }
 
 .section-heading {
+  justify-content: center;
+  display: flex;
+}
+.section-heading .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6em 0 0 0;
+  padding: 4em;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0) 80%);
+  animation: glowBG 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+  display: inline-block;
+  border-radius: 50%; /* Ensure the glow is circular */
+  position: relative;
 }
+
+.section-heading .icon img {
+  position: relative;
+  z-index: 1; /* Place the bulb image above the glow */
+  width: 75px; /* Adjust size as needed */
+}
+
+@keyframes glowBG {
+  0% {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0) 80%);
+  }
+  20% {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.45) 35%, rgba(255, 255, 255, 0) 85%);
+  }
+  50% {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0) 90%);
+  }
+  80% {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.45) 35%, rgba(255, 255, 255, 0) 85%);
+  }
+  100% {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0) 80%);
+  }
+}
+
+
+
+
 
 .section-heading .icon img {
   width: 75px; /* Adjust size as needed */
