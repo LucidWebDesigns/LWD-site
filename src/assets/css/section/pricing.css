@@ -235,11 +235,16 @@
     min-height: 25rem;
   }
 }
-.cs-item-text .fa-circle-check, .cs-item-text-popular .fa-circle-check {
+.cs-item-text i, .cs-item-text-popular i {
   color: var(--primary);
   margin-right: .75em;
   align-self: center;
 }
+#add-ons i {
+  color:  #4cde3b;
+  font-size: 1.25rem;
+}
+
 
 .cs-item-text, .cs-item-text-popular{
   display: flex;
@@ -255,11 +260,10 @@
   text-align: center;
   text-transform: uppercase;
   /* margin: 0 0 1rem 0; */
-  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
   padding: 0.75rem;
   /* border-radius: 8px; */
   display: block;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
   border-bottom: 1px solid rgba(0, 157, 255, .3);
   width: 100%;
   
@@ -267,11 +271,26 @@
 
 /* Specific Styling for Popular Package */
 .cs-item-popular .cs-package {
-  background: var(--primary);
+  background: linear-gradient(125deg, var(--primary), #026592);
   color: white;
   font-size: 1rem;
   font-weight: 900;
   /* animation: pulse 2s infinite; */
+}
+
+.cs-package-add-on {
+  /* background: black; */
+  background: linear-gradient(to right, #8cffc2, #25c114);
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.cs-package-essential {
+  background: linear-gradient(to left, #2a2a2a, #8f8f8f);
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 @keyframes pulse {
@@ -292,7 +311,6 @@
   line-height: 1.4em;
   text-align: center;
   text-transform: uppercase;
-  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
   padding: 0.75rem;
   display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
