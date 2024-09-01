@@ -229,6 +229,7 @@
   }
   #pricing .cs-card-group {
     margin: 0;
+    justify-content: center;
   }
   #pricing .cs-item {
     min-height: 25rem;
