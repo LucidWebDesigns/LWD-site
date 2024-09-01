@@ -60,8 +60,6 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   position: relative;
-  box-shadow: var(--neomorph);
-
 }
 
 /* Each list item in the carousel */
@@ -175,7 +173,8 @@
   }
   .articles__list {
     overflow-x: hidden;
-    border-radius: 15px
+    border-radius: 15px;
+    box-shadow: var(--neomorph);
   }
 
   .blog-page-snippet {
@@ -248,6 +247,7 @@
 @media (min-width: 1021px) {
   #featured-articles .snippet {
     border-radius: 15px;
+    box-shadow: var(--neomorph);
   }
   .articles__carousel {
     width: 100vw;

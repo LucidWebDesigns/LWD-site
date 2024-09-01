@@ -82,21 +82,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const items = Array.from(document.querySelectorAll('.articles__list li'));
     const scrollAmount = items[0].offsetWidth + parseInt(window.getComputedStyle(items[0]).marginRight);
     let currentIndex = 0;
+    let isScrolling = false;
 
-    // Clone first and last items for infinite scrolling
-    const firstClone = items[0].cloneNode(true);
-    const lastClone = items[items.length - 1].cloneNode(true);
-    carousel.appendChild(firstClone);
-    carousel.insertBefore(lastClone, items[0]);
-
-    const allItems = document.querySelectorAll('.articles__list li');
+    const leftButton = document.getElementById('scroll-left');
+    const rightButton = document.getElementById('scroll-right');
 
     // Function to smoothly scroll to the nearest item
     function scrollToCurrentIndex(immediate = false) {
+        isScrolling = true;
+        disableButtons();
         carousel.scrollTo({
             left: currentIndex * scrollAmount,
             behavior: immediate ? 'auto' : 'smooth'
         });
+
+        setTimeout(() => {
+            adjustIndexForInfiniteScroll();
+            enableButtons();
+            isScrolling = false;
+        }, immediate ? 0 : 500); // Adjust timing to match the scroll duration
+    }
+
+    // Disable buttons to prevent clicking during scroll
+    function disableButtons() {
+        leftButton.disabled = true;
+        rightButton.disabled = true;
+    }
+
+    // Re-enable buttons after scrolling is complete
+    function enableButtons() {
+        leftButton.disabled = false;
+        rightButton.disabled = false;
     }
 
     // Adjust currentIndex and jump when needed (for infinite scrolling)
@@ -110,26 +126,45 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Check viewport size and clone items if not in mobile view
+    function setupCarouselForViewport() {
+        const viewportWidth = window.innerWidth;
+        if (viewportWidth < 768) { // Example threshold for mobile view (adjust as needed)
+            // Clone first and last items for infinite scrolling
+            const firstClone = items[0].cloneNode(true);
+            const lastClone = items[items.length - 1].cloneNode(true);
+            carousel.appendChild(firstClone);
+            carousel.insertBefore(lastClone, items[0]);
+            allItems = document.querySelectorAll('.articles__list li');
+
+            // Initial scroll to the first item (considering the cloned element)
+            currentIndex = 1;
+            scrollToCurrentIndex(true);
+        } else {
+            allItems = items; // On mobile, just use the original items
+        }
+    }
+
     // Handle left arrow click
-    document.getElementById('scroll-left').addEventListener('click', function() {
+    leftButton.addEventListener('click', function() {
+        if (isScrolling) return; // Prevent clicking while scrolling
         if (currentIndex > 0) {
             currentIndex--;
         } else {
             currentIndex = allItems.length - 1;
         }
         scrollToCurrentIndex();
-        setTimeout(adjustIndexForInfiniteScroll, 500); // Adjust index after animation
     });
 
     // Handle right arrow click
-    document.getElementById('scroll-right').addEventListener('click', function() {
+    rightButton.addEventListener('click', function() {
+        if (isScrolling) return; // Prevent clicking while scrolling
         if (currentIndex < allItems.length - 1) {
             currentIndex++;
         } else {
             currentIndex = 0;
         }
         scrollToCurrentIndex();
-        setTimeout(adjustIndexForInfiniteScroll, 500); // Adjust index after animation
     });
 
     // Initialize Hammer.js for touch and drag functionality
@@ -138,18 +173,21 @@ document.addEventListener('DOMContentLoaded', function() {
     let startX;
 
     hammer.on('panstart', (e) => {
+        if (isScrolling) return; // Prevent dragging while scrolling
         startScrollLeft = carousel.scrollLeft;
         startX = e.center.x;
         carousel.style.scrollSnapType = 'none'; // Disable snap during drag
     });
 
     hammer.on('panmove', (e) => {
+        if (isScrolling) return; // Prevent dragging while scrolling
         const x = e.center.x;
         const walk = startX - x;
         carousel.scrollLeft = startScrollLeft + walk;
     });
 
     hammer.on('panend', () => {
+        if (isScrolling) return; // Prevent further actions while scrolling
         // Calculate the nearest item after drag
         currentIndex = Math.round(carousel.scrollLeft / scrollAmount);
         scrollToCurrentIndex();
@@ -159,12 +197,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 50); // Small delay for smoother snapping
     });
 
-    // Initial scroll to the first item (considering the cloned element)
-    currentIndex = 1;
-    scrollToCurrentIndex(true);
+    // Setup carousel based on viewport size
+    setupCarouselForViewport();
+
+    // Optional: Add a resize event listener to handle window resizing
+    window.addEventListener('resize', () => {
+        setupCarouselForViewport();
+    });
 });
 </script>
-
 
 
   <script>
