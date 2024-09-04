@@ -77,12 +77,13 @@
 <!-- START CAROUSEL -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.articles__list');
     const items = Array.from(document.querySelectorAll('.articles__list li'));
     const scrollAmount = items[0].offsetWidth + parseInt(window.getComputedStyle(items[0]).marginRight);
     let currentIndex = 0;
     let isScrolling = false;
+    let allItems = items; // Initialize allItems with the original items
 
     const leftButton = document.getElementById('scroll-left');
     const rightButton = document.getElementById('scroll-right');
@@ -126,13 +127,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Remove previously cloned items
+    function clearClonedItems() {
+        const clones = document.querySelectorAll('.articles__list .clone');
+        clones.forEach(clone => clone.remove());
+    }
+
     // Check viewport size and clone items if not in mobile view
     function setupCarouselForViewport() {
         const viewportWidth = window.innerWidth;
-        if (viewportWidth < 768) { // Example threshold for mobile view (adjust as needed)
-            // Clone first and last items for infinite scrolling
+        clearClonedItems(); // Clear any previous clones
+        
+        if (viewportWidth >= 768) { // Clone items for non-mobile views
             const firstClone = items[0].cloneNode(true);
             const lastClone = items[items.length - 1].cloneNode(true);
+            firstClone.classList.add('clone');
+            lastClone.classList.add('clone');
             carousel.appendChild(firstClone);
             carousel.insertBefore(lastClone, items[0]);
             allItems = document.querySelectorAll('.articles__list li');
@@ -205,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupCarouselForViewport();
     });
 });
+
 </script>
 
 
