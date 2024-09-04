@@ -117,11 +117,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adjust currentIndex and jump when needed (for infinite scrolling)
     function adjustIndexForInfiniteScroll() {
-        if (currentIndex === 0) {
-            currentIndex = items.length; // Jump to the last original item
-            scrollToCurrentIndex(true);
-        } else if (currentIndex === allItems.length - 1) {
-            currentIndex = 1; // Jump to the first original item
+        // if (currentIndex === 0) {
+        //     currentIndex = items.length; // Jump to the last original item
+        //     scrollToCurrentIndex(true);
+        // } else if (currentIndex === allItems.length - 1) {
+        //     currentIndex = 1; // Jump to the first original item
+        //     scrollToCurrentIndex(true);
+        // }
+        if (currentIndex === allItems.length - 1) {
+            currentIndex = 0; // Jump to the first original item
             scrollToCurrentIndex(true);
         }
     }
