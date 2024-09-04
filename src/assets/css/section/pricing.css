@@ -86,7 +86,7 @@
     max-width: 300px;
     margin: 1.5rem 0;
     box-shadow: var(--neomorph);
-    border: 1px solid rgba(0,0,0,.15);
+    /* border: 1px solid rgba(0,0,0,.15); */
     overflow: hidden;
   }
     #pricing .cs-item-popular {
@@ -103,7 +103,7 @@
     max-width: 330px;
     margin: 1.5rem 0;
     box-shadow: var(--neomorph), 0px 0px 20px var(--primary);
-    border: 1px solid rgba(0,0,0,.15);
+    /* border: 1px solid rgba(0,0,0,.15); */
     z-index: 1;
     font-size: 1.1em;
     overflow: hidden;
@@ -238,9 +238,11 @@
   align-self: center;
 }
 #add-ons i {
-  color:  #fff399;
+  /* color:  #fff399; */
+  color: var(--primary);
   font-size: 1.25rem;
-  text-shadow: 0px 0px 2px black;
+  font-weight: bold;
+  /* text-shadow: 0px 0px 2px black; */
 }
 #add-ons {
   background-color: black;
@@ -272,24 +274,28 @@
 
 /* Specific Styling for Popular Package */
 .cs-item-popular .cs-package {
-  background: linear-gradient(125deg, #5ef388, #0ccf43);
-  color: white;
+  background: linear-gradient(125deg, #aeff0045, #00ff447c);
+  /* color: white; */
+  color: var(--primary);
   font-size: 1rem;
   font-weight: 900;
   /* animation: pulse 2s infinite; */
 }
 
 .cs-package-add-on {
-  /* background: black; */
-  background: linear-gradient(to right, #fff6af, #ffee6d);
-  color: black;
+  background: linear-gradient(125deg, #24e5ff, #0084ff);
+
+  /* background: linear-gradient(to right, #fff6af, #ffee6d); */
+  /* color: black; */
+  color: white;
+  /* text-shadow: 1px 0px 3px black; */
   font-size: 1rem;
   font-weight: 900;
 }
 
 .cs-package-essential {
   /* background: linear-gradient(to left, #2a2a2a, #8f8f8f); */
-  background: linear-gradient(125deg, var(--primary), #026592);
+  background: linear-gradient(125deg, #24e5ff, #0084ff);
   color: white;
   font-size: 1rem;
   font-weight: 900;
@@ -329,15 +335,15 @@
   justify-content: flex-start;
   align-items: center; /* Center children horizontally */
   text-align: center; /* Center text */
-  border-radius: 15px;
+  border-radius: 8px;
   margin: 1.5rem 0;
   box-shadow: var(--neomorph);
-  border: 1px solid rgba(0,0,0,.15);
+  /* border: 1px solid rgba(0,0,0,.15); */
   overflow: hidden;
   letter-spacing: .04em;
 }
 #pricing .cs-item-popular {
-   box-shadow: var(--neomorph);
+   box-shadow: 6px 0px 9px rgba(0,0,0,.2), -6px 0px 9px rgba(0,0,0,.2);
 }
 
 #pricing .cs-item-container,

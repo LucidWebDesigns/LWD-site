@@ -1,6 +1,6 @@
 :root {
   /* ################################ TOBY ####################################### */
-  --url-img-1: url(../images/bulb-bg.avif);
+  --url-img-1: url(../images/good-idea.jpg);
   --margin-img-1-mobile: 30vh;
   --margin-img-1-big: 50vh;
   --min-vh-img-1-mobile: 100vh;
@@ -368,11 +368,8 @@ a {
   /* prevents padding from adding to the width */
   /* box-sizing: border-box;
   box-shadow: var(--neomorph-btn) */
-  border-radius: 0.5em;
-  background: linear-gradient(125deg, var(--primary), #026592);
-  /* box-shadow:  3px 3px 5px rgba(0, 0, 0, .5),
-              3px -3px 5px rgba(255, 255, 255, .5); */
-  box-shadow: var(--neomorph-btn);
+  border-radius: 8px;
+  background: linear-gradient(125deg, #24e5ff, #0084ff);
 }
 .cs-button-solid:before,
 .cs-button-solid:before {
@@ -860,18 +857,15 @@ font sizes, styles
   .bg-overlay {
     background-image: var(--url-img-1);
     width: 100vw;
-    /* max-height: 50vh; */
-    background-position-x: -50px;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-position: center; */
     background-attachment: scroll;
-    background-blend-mode: darken;
-    background-color:  rgba(15, 88, 133, .65);
+    background-blend-mode:overlay;
+    background-color:  rgba(0, 12, 55, .75);
     display:flex;
     justify-content: center;
     padding: 2.5em 0 .5em 0;
-    height: 40vh;
+    /* height: 40vh; */
   }
 }
 @media only screen and (min-width: 48rem) {
@@ -880,8 +874,8 @@ font sizes, styles
   }
   .bg-overlay {
     background-attachment: fixed;
-    height: 45vh;
-    background-position-y: -150px;
+    /* height: 45vh; */
+    /* background-position-y: -150px; */
     background-position-x: 0px;
   }
 }
