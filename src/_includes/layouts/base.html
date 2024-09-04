@@ -10,7 +10,8 @@
     <link rel="icon" type="image/x-icon" href="../assets/images/bulb.svg" />
     <link rel="stylesheet" href="/assets/css/core.css" />
   </head>
-  <body style="background-color: {{ backgroundColor | default('#ffffff') }};">
+  <body style="background-color: {{ backgroundColor | default('#ffffff')}}; background: {{ background | default('#ffffff')}};"
+">
 <!-- <a class="skip" aria-label="skip to main content" href="#main" tabindex="1">Click To Skip To Main Content</a> -->
         {% include "components/header.html" %}
         <main id="main">

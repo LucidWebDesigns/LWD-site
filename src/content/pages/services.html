@@ -4,6 +4,7 @@ description: 'Lucid Web Designs, based in Austin, TX, specializes in handcrafted
 permalink: 'services/'
 preloadImg: '/assets/images/womanbulb.png'
 backgroundColor: "#ddf2f4" 
+background: "linear-gradient(270deg, #ddf2f4, rgba(255,255,245))"
 eleventyNavigation:
     key: Services
     order: 3100
@@ -219,9 +220,9 @@ layout: "layouts/base.html"
         <ul class="cs-card-group">
           <!-- Essential Package -->
           <li class="cs-item slide-in-left">
-            <span class="cs-package">Essential Package</span>
+            <span class="cs-package cs-package-essential">Essential Package</span>
             <div class="cs-item-container">
-              <span>$1200 down</span>
+              <span style="color: var(--body-text-color)">$1200 down</span>
             <div class="cs-flex-wrapper">
               <span class="cs-price">$100</span>
               <span class="cs-frequency">/MO</span>
@@ -231,7 +232,7 @@ layout: "layouts/base.html"
               <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i>Up to 1 Hour of Content Updates/Month</li>
               <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i>On Page SEO</li>
               <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i>Email Support (48-Hour Response Time)</li>
-              <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i>12 month minimum contract</li>
+              <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i>6 month minimum contract</li>
             </ul>
             <a href="/contact" class="cs-button-solid cs-price-button">CONTACT US</a>
             </div>
@@ -241,7 +242,7 @@ layout: "layouts/base.html"
           <li class="cs-item-popular cs-popular slide-in-right">
             <span class="cs-package">Standard Package</span>
             <div class="cs-item-container-popular">
-              <span>$0 down</span>
+              <span style="color: var(--bodyTextColor)">$0 down</span>
             <div class="cs-flex-wrapper">
               <span class="cs-price">$200</span>
               <span class="cs-frequency">/MO</span>
@@ -251,20 +252,26 @@ layout: "layouts/base.html"
               <li class="cs-item-text-popular"><i class="fa-solid fa-circle-check"></i>Up to 2 Hours of Content Updates/Month</li>
               <li class="cs-item-text-popular"><i class="fa-solid fa-circle-check"></i>25% Off Add-ons</li>
               <li class="cs-item-text-popular"><i class="fa-solid fa-circle-check"></i>Priority Phone Support (24-Hour Response Time)</li>
+              <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i>12 month minimum contract</li>
             </ul>
             <a href="/contact" class="cs-button-solid cs-price-button">CONTACT US</a>
             </div>
           </li>
 
           <!-- Add-ons -->
-          <li class="cs-item slide-in-left">
-            <span class="cs-package">Add-ons</span>
+          <li id="add-ons" class="cs-item slide-in-left">
+            <span class="cs-package cs-package-add-on">Add-ons</span>
             <div class="cs-item-container">
+              <!-- <span style="color: var(--body-text-color)">flexible</span> -->
+              <div class="cs-flex-wrapper">
+              <span class="cs-price">à la carte</span>
+              <!-- <span class="cs-frequency">À la carte</span> -->
+            </div>
             <ul class="cs-price-details">
-              <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i><p><strong>$100/ea</strong> page of copy or per 500 characters</p></li>
-              <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i><p><strong>$100/ea</strong> hour of content updates</p>></li>
-              <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i><p><span><strong>$50/mo </strong></span> Priority Phone Support (Same-Day Response Time)</p></li>
-              <li class="cs-item-text"><i class="fa-solid fa-circle-check"></i><p><strong>$100/ea</strong> for additional page</p></li>
+              <li class="cs-item-text"><i class="fa-solid fa-square-plus"></i><p><strong>$100/ea</strong> page of copy or per 500 characters</p></li>
+              <li class="cs-item-text"><i class="fa-solid fa-square-plus"></i><p><strong>$100/ea</strong> hour of content updates</p></li>
+              <li class="cs-item-text"><i class="fa-solid fa-square-plus"></i><p><span><strong>$50/mo </strong></span> Priority Phone Support (Same-Day Response Time)</p></li>
+              <li class="cs-item-text"><i class="fa-solid fa-square-plus"></i><p><strong>$100</strong> for each additional page</p></li>
             </ul>
             <a href="/contact" class="cs-button-solid cs-price-button">CONTACT US</a>
             </div>

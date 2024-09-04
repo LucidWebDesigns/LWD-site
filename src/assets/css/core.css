@@ -599,7 +599,7 @@ a {
   text-align: center;
   z-index: 100;
   background: linear-gradient(
-    90deg,
+    270deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(1, 60, 132, 1) 0%,
     rgba(0, 157, 255, 1) 100%

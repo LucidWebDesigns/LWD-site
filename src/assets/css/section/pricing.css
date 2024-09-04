@@ -174,7 +174,7 @@
     color: var(--titleTextColor);
   }
   #pricing .cs-button-solid {
-    margin: 2rem  0 ;
+    margin-top: 2rem;
   }
   #pricing .cs-graphic {
     width: 100%;
@@ -231,9 +231,6 @@
     margin: 0;
     justify-content: center;
   }
-  #pricing .cs-item {
-    min-height: 25rem;
-  }
 }
 .cs-item-text i, .cs-item-text-popular i {
   color: var(--primary);
@@ -241,8 +238,12 @@
   align-self: center;
 }
 #add-ons i {
-  color:  #4cde3b;
+  color:  #fff399;
   font-size: 1.25rem;
+  text-shadow: 0px 0px 2px black;
+}
+#add-ons {
+  background-color: black;
 }
 
 
@@ -271,7 +272,7 @@
 
 /* Specific Styling for Popular Package */
 .cs-item-popular .cs-package {
-  background: linear-gradient(125deg, var(--primary), #026592);
+  background: linear-gradient(125deg, #5ef388, #0ccf43);
   color: white;
   font-size: 1rem;
   font-weight: 900;
@@ -280,14 +281,15 @@
 
 .cs-package-add-on {
   /* background: black; */
-  background: linear-gradient(to right, #8cffc2, #25c114);
-  color: white;
+  background: linear-gradient(to right, #fff6af, #ffee6d);
+  color: black;
   font-size: 1rem;
   font-weight: 900;
 }
 
 .cs-package-essential {
-  background: linear-gradient(to left, #2a2a2a, #8f8f8f);
+  /* background: linear-gradient(to left, #2a2a2a, #8f8f8f); */
+  background: linear-gradient(125deg, var(--primary), #026592);
   color: white;
   font-size: 1rem;
   font-weight: 900;
@@ -332,21 +334,18 @@
   box-shadow: var(--neomorph);
   border: 1px solid rgba(0,0,0,.15);
   overflow: hidden;
+  letter-spacing: .04em;
+}
+#pricing .cs-item-popular {
+   box-shadow: var(--neomorph);
 }
 
 #pricing .cs-item-container,
 #pricing .cs-item-container-popular {
-  padding: 0 clamp(2rem, 2vw, 2.5rem) 0;
+  padding: 0 clamp(1rem, 1vw, 1.25rem) clamp(2rem, 2vw, 2.5rem);
   display: flex;
   flex-direction: column;
   align-items: center; /* Center contents inside the container */
-}
-
-.cs-price-button {
-  margin: 2rem 0;
-  display: inline-block;
-  text-align: center;
-  /* Additional button styling if necessary */
 }
 .standard-discount {
   line-height: .35;
