@@ -4,9 +4,8 @@
     width: 200px;
     height: 200px;
     border-radius: 10%;
-    padding: 1em;
-    margin: auto;
-    object-fit: contain;
+    margin: 2em auto 0;
+    /* object-fit: contain; */
   }
   .cs-info {
     color: var(--titleTextColor);
