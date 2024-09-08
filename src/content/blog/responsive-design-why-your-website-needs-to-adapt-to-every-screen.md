@@ -17,8 +17,6 @@ imageAlt: different device screens
 
 Responsive design is a web design approach that allows a website to automatically adjust and adapt its layout and content to fit the screen size and orientation of the device being used. This ensures that the user experience is consistent, regardless of whether the site is being viewed on a large desktop monitor or a small smartphone screen.
 
-## Benefits of Responsive Design
-
 ### Improved User Experience
 
 A responsive design ensures that your website looks and functions well on all devices. This leads to a better user experience, as visitors can easily navigate and interact with your site, regardless of the device they’re using.
