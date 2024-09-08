@@ -1,24 +1,25 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name=description content="Lucid Web Designs, based in Austin, TX, specializes in handcrafted, high-performance websites tailored for small businesses. With a focus on mobile-first design, seamless user experience, and optimized performance, we help you elevate your online presence. Get started today with affordable, custom web solutions starting at just $200/month.">
+    <meta
+      name="description"
+      content="Lucid Web Designs, based in Austin, TX, specializes in handcrafted, high-performance websites tailored for small businesses. With a focus on mobile-first design, seamless user experience, and optimized performance, we help you elevate your online presence. Get started today with affordable, custom web solutions starting at just $200/month."
+    />
     <title>{{ title }}</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/bulb.svg" />
     <link rel="stylesheet" href="/assets/css/core.css" />
   </head>
-  <body style="background-color: {{ backgroundColor | default('#ffffff')}}; background: {{ background | default('#ffffff')}};">
-<!-- <a class="skip" aria-label="skip to main content" href="#main" tabindex="1">Click To Skip To Main Content</a> -->
-        {% include "components/header.html" %}
-        <main id="main">
-            {{ content | safe }}
-        </main>
-        {% include "components/footer.html" %}
+  <body
+    style="background-color: {{ backgroundColor | default('#ffffff')}}; background: {{ background | default('#ffffff')}};"
+  >
+    <!-- <a class="skip" aria-label="skip to main content" href="#main" tabindex="1">Click To Skip To Main Content</a> -->
+    {% include "components/header.html" %}
+    <main id="main">{{ content | safe }}</main>
+    {% include "components/footer.html" %}
 
-      <script
+    <script
       defer
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
@@ -70,103 +71,111 @@
             this.classList.add("active");
           });
         });
-        
       });
     </script>
 
-<!-- START CAROUSEL -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.articles__list');
-    const items = document.querySelectorAll('.articles__list li');
-    const scrollAmount = items[0].offsetWidth + parseInt(window.getComputedStyle(items[0]).marginRight);
-    let currentIndex = 0;
+    <!-- START CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".articles__list");
+        const items = document.querySelectorAll(".articles__list li");
+        const scrollAmount =
+          items[0].offsetWidth +
+          parseInt(window.getComputedStyle(items[0]).marginRight);
+        let currentIndex = 0;
 
-    // Function to smoothly scroll to the nearest item
-    function scrollToCurrentIndex() {
-        carousel.scrollTo({
+        // Function to smoothly scroll to the nearest item
+        function scrollToCurrentIndex() {
+          carousel.scrollTo({
             left: currentIndex * scrollAmount,
-            behavior: 'smooth'
+            behavior: "smooth",
+          });
+        }
+
+        // Handle left arrow click
+        document
+          .getElementById("scroll-left")
+          .addEventListener("click", function () {
+            if (currentIndex > 0) {
+              currentIndex--;
+            } else {
+              currentIndex = items.length - 1;
+            }
+            scrollToCurrentIndex();
+          });
+
+        // Handle right arrow click
+        document
+          .getElementById("scroll-right")
+          .addEventListener("click", function () {
+            if (currentIndex < items.length - 1) {
+              currentIndex++;
+            } else {
+              currentIndex = 0;
+            }
+            scrollToCurrentIndex();
+          });
+
+        // Initialize Hammer.js for touch and drag functionality
+        const hammer = new Hammer(carousel);
+        let startScrollLeft;
+        let startX;
+
+        hammer.on("panstart", (e) => {
+          startScrollLeft = carousel.scrollLeft;
+          startX = e.center.x;
+          carousel.style.scrollSnapType = "none"; // Disable snap during drag
         });
-    }
 
-    // Handle left arrow click
-    document.getElementById('scroll-left').addEventListener('click', function() {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = items.length - 1;
-        }
-        scrollToCurrentIndex();
-    });
+        hammer.on("panmove", (e) => {
+          const x = e.center.x;
+          const walk = startX - x;
+          carousel.scrollLeft = startScrollLeft + walk;
+        });
 
-    // Handle right arrow click
-    document.getElementById('scroll-right').addEventListener('click', function() {
-        if (currentIndex < items.length - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        scrollToCurrentIndex();
-    });
-
-    // Initialize Hammer.js for touch and drag functionality
-    const hammer = new Hammer(carousel);
-    let startScrollLeft;
-    let startX;
-
-    hammer.on('panstart', (e) => {
-        startScrollLeft = carousel.scrollLeft;
-        startX = e.center.x;
-        carousel.style.scrollSnapType = 'none'; // Disable snap during drag
-    });
-
-    hammer.on('panmove', (e) => {
-        const x = e.center.x;
-        const walk = startX - x;
-        carousel.scrollLeft = startScrollLeft + walk;
-    });
-
-    hammer.on('panend', () => {
-        // Calculate the nearest item after drag
-        currentIndex = Math.round(carousel.scrollLeft / scrollAmount);
-        scrollToCurrentIndex();
-        setTimeout(() => {
-            carousel.style.scrollSnapType = 'x mandatory'; // Re-enable snap after dragging
-        }, 50); // Small delay for smoother snapping
-    });
-});
-</script>
-
-
-
-  <script>
-    const observerOptions = {
-      root: null, // Use the viewport as the root
-      rootMargin: '0px 0px -35% 0px', // Trigger when the element is 20% into the viewport
-      threshold: 0 // Trigger as soon as any part of the element is visible
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (entry.target.classList.contains('fade-in')) {
-            entry.target.classList.add('fade-in-visible');
-          } else if (entry.target.classList.contains('slide-in-left')) {
-            entry.target.classList.add('slide-in-visible');
-          } else if (entry.target.classList.contains('slide-in-right')) {
-            entry.target.classList.add('slide-in-visible');
-          }
-        }
+        hammer.on("panend", () => {
+          // Calculate the nearest item after drag
+          currentIndex = Math.round(carousel.scrollLeft / scrollAmount);
+          scrollToCurrentIndex();
+          setTimeout(() => {
+            carousel.style.scrollSnapType = "x mandatory"; // Re-enable snap after dragging
+          }, 50); // Small delay for smoother snapping
+        });
       });
-    }, observerOptions);
+    </script>
 
-    // Observe both fade-in and slide-in sections
-    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
-  <script src="https://kit.fontawesome.com/c8df661d1f.js" crossorigin="anonymous"></script>
+    <script>
+      const observerOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px 0px -35% 0px", // Trigger when the element is 20% into the viewport
+        threshold: 0, // Trigger as soon as any part of the element is visible
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains("fade-in")) {
+              entry.target.classList.add("fade-in-visible");
+            } else if (entry.target.classList.contains("slide-in-left")) {
+              entry.target.classList.add("slide-in-visible");
+            } else if (entry.target.classList.contains("slide-in-right")) {
+              entry.target.classList.add("slide-in-visible");
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Observe both fade-in and slide-in sections
+      document
+        .querySelectorAll(".fade-in, .slide-in-left, .slide-in-right")
+        .forEach((section) => {
+          observer.observe(section);
+        });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/c8df661d1f.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
