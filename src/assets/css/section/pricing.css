@@ -4,6 +4,16 @@
 /* test */
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+  #add-ons ul {
+    margin: 0.9em auto;
+  }
+  #essential ul {
+    margin: 0.5em auto;
+  }
+  .cs-item-popular ul {
+    margin: 1em;
+    gap: 2em;
+  }
   .cs-price-details {
     display: flex;
     flex-direction: column;
@@ -89,10 +99,8 @@
     /* border: 1px solid rgba(0,0,0,.15); */
     overflow: hidden;
   }
-    #pricing .cs-item-popular {
+  #pricing .cs-item-popular {
     width: 100%;
-    /* padding: clamp(2.2rem, 2.2vw, 2.75rem) clamp(1.1rem, 1.65vw, 2.2rem); */
-    /* background-color: rgba(255,255,255,1); */
     background: var(--item-bg);
     box-sizing: border-box;
     display: flex;
@@ -103,16 +111,15 @@
     max-width: 330px;
     margin: 1.5rem 0;
     box-shadow: var(--neomorph), 0px 0px 20px var(--primary);
-    /* border: 1px solid rgba(0,0,0,.15); */
     z-index: 1;
     font-size: 1.1em;
     overflow: hidden;
   }
   #pricing .cs-item-container {
-    padding:0  clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
+    padding: 0 clamp(2rem, 2vw, 2.5rem) clamp(1rem, 1.5vw, 2rem);
   }
   #pricing .cs-item-container-popular {
-    padding:0 clamp(2.2rem, 2.2vw, 2.75rem) clamp(1.1rem, 1.65vw, 2.2rem);
+    padding: 0 clamp(2.2rem, 2.2vw, 2.75rem) clamp(1.1rem, 1.65vw, 2.2rem);
   }
   #pricing .cs-item .cs-price,
   #pricing .cs-item-popular .cs-price,
@@ -153,10 +160,10 @@
     margin: 0;
     color: var(--placeholderColor);
   }
-  #pricing .cs-item  .cs-frequency {
+  #pricing .cs-item .cs-frequency {
     font-size: 1.3rem;
   }
-    #pricing .cs-item-popular  .cs-frequency {
+  #pricing .cs-item-popular .cs-frequency {
     font-size: 1.65rem;
   }
   #pricing .cs-item-text {
@@ -175,15 +182,6 @@
   }
   #pricing .cs-button-solid {
     margin-top: 2rem;
-  }
-  #pricing .cs-graphic {
-    width: 100%;
-    min-width: 120rem;
-    height: auto;
-    position: absolute;
-    bottom: -1rem;
-    left: 0rem;
-    z-index: -1;
   }
   #pricing .cs-dark {
     display: none;
@@ -232,9 +230,10 @@
     justify-content: center;
   }
 }
-.cs-item-text i, .cs-item-text-popular i {
+.cs-item-text i,
+.cs-item-text-popular i {
   color: var(--primary);
-  margin-right: .75em;
+  margin-right: 0.75em;
   align-self: center;
 }
 #add-ons i {
@@ -248,15 +247,15 @@
   background-color: black;
 }
 
-
-.cs-item-text, .cs-item-text-popular{
+.cs-item-text,
+.cs-item-text-popular {
   display: flex;
   color: var(--bodyTextColor);
 }
 
 /* General Styling for cs-package */
 .cs-package {
-  font-size: .9rem;
+  font-size: 0.9rem;
   /* letter-spacing: .05rem;  */
   font-weight: 700;
   line-height: 1.4em;
@@ -267,9 +266,8 @@
   /* border-radius: 8px; */
   display: block;
   /* transition: background-color 0.3s ease, color 0.3s ease; */
-  border-bottom: 1px solid rgba(0, 157, 255, .3);
+  border-bottom: 1px solid rgba(0, 157, 255, 0.3);
   width: 100%;
-  
 }
 
 /* Specific Styling for Popular Package */
@@ -306,7 +304,7 @@
     box-shadow: 0 0 10px rgba(0, 157, 255, 0.7);
   }
   70% {
-    box-shadow: 0 10px 10px rgba(0, 157, 255, .5);
+    box-shadow: 0 10px 10px rgba(0, 157, 255, 0.5);
   }
   100% {
     box-shadow: 0 0 10px rgba(0, 157, 255, 0.7);
@@ -314,7 +312,7 @@
 }
 /* Centering cs-package */
 .cs-package {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.4em;
   text-align: center;
@@ -322,7 +320,7 @@
   padding: 0.75rem;
   display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border-bottom: 1px solid rgba(0, 157, 255, .3);
+  border-bottom: 1px solid rgba(0, 157, 255, 0.3);
   width: 100%;
   box-sizing: border-box;
 }
@@ -340,10 +338,10 @@
   box-shadow: var(--neomorph);
   /* border: 1px solid rgba(0,0,0,.15); */
   overflow: hidden;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
 }
 #pricing .cs-item-popular {
-   box-shadow: 6px 0px 9px rgba(0,0,0,.2), -6px 0px 9px rgba(0,0,0,.2);
+  box-shadow: 6px 0px 9px rgba(0, 0, 0, 0.2), -6px 0px 9px rgba(0, 0, 0, 0.2);
 }
 
 #pricing .cs-item-container,
@@ -354,13 +352,14 @@
   align-items: center; /* Center contents inside the container */
 }
 .standard-discount {
-  line-height: .35;
+  line-height: 0.35;
   color: var(--bodyTextColor);
   margin-left: 3em;
   margin-top: 1en;
   font-size: 1rem;
 }
-.cs-item-text strong, .cs-item-text-popular strong {
+.cs-item-text strong,
+.cs-item-text-popular strong {
   /* color: var(--primary); */
   color: var(--bodyTextColor);
 }
