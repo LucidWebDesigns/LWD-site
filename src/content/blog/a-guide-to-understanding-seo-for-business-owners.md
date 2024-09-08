@@ -17,6 +17,7 @@ imageAlt: 3d image of SEO
 
 SEO is the practice of optimizing your website to improve its visibility in search engine results pages (SERPs). The goal is to rank higher for relevant keywords, making it easier for potential customers to find you when they search for products or services related to your business.
 
+
 ## Key Components of SEO
 
 ### Keywords
