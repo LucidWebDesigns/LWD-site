@@ -35,9 +35,13 @@
     padding: 2em;
     border-radius: 25px;
   }
+  #about-page-top .cs-content,
+  #services-page-top .cs-content {
+    box-shadow: none;
+  }
   #side-by-side .cs-text {
     margin-bottom: 1rem;
-    text-align: left;;
+    text-align: left;
   }
   #side-by-side .cs-text:last-of-type {
     margin: 0;
@@ -51,7 +55,7 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 1.5rem;
-    color: var(--bodyTextColor)
+    color: var(--bodyTextColor);
   }
   #side-by-side .cs-li {
     list-style: none;

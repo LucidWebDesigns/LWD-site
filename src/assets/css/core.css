@@ -856,7 +856,7 @@ font sizes, styles
     display: flex;
     justify-content: center;
     padding: 2.5em 0 0.5em 0;
-    /* height: 40vh; */
+    height: 40vh;
   }
 }
 @media only screen and (min-width: 48rem) {
@@ -1028,7 +1028,7 @@ main {
 /* ######################################################### */
 .top-section-jumboless {
   padding-top: 10vh;
-  background-color: rgba(15, 68, 83, 0.76);
+  background-color: rgba(15, 48, 83, 0.7);
   background-position-x: 50%;
 }
 

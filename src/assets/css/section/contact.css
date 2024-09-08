@@ -26,7 +26,7 @@
     align-items: stretch;
     /* 48px - 64px */
     gap: clamp(3rem, 5vw, 4rem);
-    padding: 1.5em 0;
+    padding: 1em 0;
   }
 
   .cs-form-group {
@@ -36,11 +36,10 @@
     border-radius: 20px;
 
     /* background: #e2edf4; */
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     /* background: #ddf1f3; */
-    background: rgba(0,0,0,0);
-    box-shadow: inset 7px 7px 14px #afbec0,
-            inset -7px -7px 14px #ffffff;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: inset 7px 7px 14px #afbec0, inset -7px -7px 14px #ffffff;
   }
   #contact .cs-info-group {
     align-self: flex-start;
@@ -51,16 +50,18 @@
   #contact .cs-info-subgroup {
     display: inline-flex;
     /* box-shadow: var(--neomorph); */
-    padding: 1em;
-    border-radius: 25px;
+    padding: 0.5em;
+    border-radius: 10px;
     box-shadow: var(--neomorph);
     background: #ffffff;
   }
 
-  input[type="text"], input[type="email"], input[type="phone"], textarea  {
-    background: rgba(0,0,0,0);
+  input[type="text"],
+  input[type="email"],
+  input[type="phone"],
+  textarea {
+    background: rgba(0, 0, 0, 0);
   }
-
 
   #contact .cs-info-subgroup hr {
     padding: 0;
@@ -69,7 +70,7 @@
   }
   #contact .cs-info {
     display: flex;
-    gap: 2em;
+    gap: 1em;
     flex-direction: column;
   }
   #contact .cs-content {

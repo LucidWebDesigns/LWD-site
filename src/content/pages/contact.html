@@ -1,39 +1,32 @@
 ---
 title: Contact | Lucid Web Designs
-description: 'Lucid Web Designs, based in Austin, TX, specializes in handcrafted, high-performance websites tailored for small businesses. With a focus on mobile-first design, seamless user experience, and optimized performance, we help you elevate your online presence. Get started today with affordable, custom web solutions starting at just $200/month.'
-permalink: 'contact/'
-preloadImg: '/assets/images/bulb-abstract-bg.webp'
+description: "Lucid Web Designs, based in Austin, TX, specializes in handcrafted, high-performance websites tailored for small businesses. With a focus on mobile-first design, seamless user experience, and optimized performance, we help you elevate your online presence. Get started today with affordable, custom web solutions starting at just $200/month."
+permalink: "contact/"
+preloadImg: "/assets/images/bulb-abstract-bg.webp"
 eleventyNavigation:
-    key: Contact Us
-    order: 600
+  key: Contact Us
+  order: 600
 layout: "layouts/base.html"
 ---
 
-
-
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/section/contact.css" />
-{% endblock %}
+<link rel="stylesheet" href="/assets/css/section/contact.css" />
+{% endblock %} {% block body %}
 
-{% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<div class="bg-overlay">
+  <h1 class="page-header-title content">CONTACT</h1>
+  <p class="content">Please use the form below or reach out directly</p>
+</div>
 
-
-  <div class="bg-overlay">
-    <h1 class="page-header-title content">CONTACT US NOW</h1>
-    <p class="content">We're excited to hear from you! Please use the form below or reach out directly</p>
-  </div>
-
-    
-
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
-    <section class="top-section white-bg">
-  <div class="content pb-md pt-lg">
+<!-- ============================================ -->
+<!--                Contact Form                  -->
+<!-- ============================================ -->
+<section class="top-section white-bg">
+  <div class="content pb-md pt-sm">
     <div id="contact">
       <div id="fixed-image"></div>
       <div class="cs-container">
@@ -124,30 +117,33 @@ layout: "layouts/base.html"
   </div>
 </section>
 
-
 <!-- FAQ Section -->
 <section id="faq" class="content white-bg pt-lg pb-lg">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-items">
-        <!-- FAQ items will be inserted here by JavaScript -->
-    </div>
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-items">
+    <!-- FAQ items will be inserted here by JavaScript -->
+  </div>
 </section>
 
+<!-- Privacy Statement -->
+<section id="privacy" class="content white-bg pt-lg pb-md">
+  <h2 class="pb-sm">Privacy Statement</h2>
+  <p>
+    Your privacy is important to us. We will never share your information with
+    third parties. For more details, read our
+    <a href="/privacy-policy/">Privacy Policy</a>.
+  </p>
+</section>
 
+<!-- Call to Action Section -->
+<section id="cta" class="content white-bg pt-md pb-lg">
+  <h2 class="pb-sm">Ready to Start Your Project?</h2>
+  <p class="pb-sm">
+    Contact us today to begin your journey to a new, amazing website!
+  </p>
+  <a href="#contact" class="cs-button-solid">Contact Us</a>
+</section>
 
- <!-- Privacy Statement -->
-  <section id="privacy" class="content white-bg pt-lg pb-md">
-    <h2 class="pb-sm">Privacy Statement</h2>
-    <p>Your privacy is important to us. We will never share your information with third parties. For more details, read our <a href="/privacy-policy/">Privacy Policy</a>.</p>
-  </section>
- 
- <!-- Call to Action Section -->
-  <section id="cta" class="content white-bg pt-md pb-lg">
-    <h2 class="pb-sm">Ready to Start Your Project?</h2>
-    <p class="pb-sm">Contact us today to begin your journey to a new, amazing website!</p>
-    <a href="#contact" class="cs-button-solid">Contact Us</a>
-  </section>
-
-  <script src="../../assets/js/faq.js"></script>
+<script src="../../assets/js/faq.js"></script>
 
 {% endblock %}
