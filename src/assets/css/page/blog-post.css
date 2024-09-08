@@ -113,7 +113,7 @@
   #blog-post-body {
     -webkit-box-shadow: var(--neomorph);
     box-shadow: var(--neomorph);
-    padding: 1.5em 1em;
+    padding: 0 1em 1.5em;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     background-color: var(--text-bg);
