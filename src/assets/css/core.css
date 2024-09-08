@@ -856,6 +856,9 @@ font sizes, styles
     display: flex;
     justify-content: center;
     padding: 2.5em 0 0.5em 0;
+  }
+  #blog-bg.bg-overlay,
+  #contact-bg.bg-overlay {
     height: 40vh;
   }
 }
