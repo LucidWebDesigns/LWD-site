@@ -22,8 +22,9 @@
     <script
       defer
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+      defer
     ></script>
-    <script>
+    <script defer>
       document.addEventListener("DOMContentLoaded", function () {
         const navItems = document.querySelectorAll(".nav-item");
 
@@ -75,8 +76,11 @@
     </script>
 
     <!-- START CAROUSEL -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-    <script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+      defer
+    ></script>
+    <script defer>
       document.addEventListener("DOMContentLoaded", function () {
         const carousel = document.querySelector(".articles__list");
         const items = document.querySelectorAll(".articles__list li");
@@ -145,7 +149,7 @@
       });
     </script>
 
-    <script>
+    <script defer>
       const observerOptions = {
         root: null, // Use the viewport as the root
         rootMargin: "0px 0px -35% 0px", // Trigger when the element is 20% into the viewport
@@ -176,6 +180,7 @@
     <script
       src="https://kit.fontawesome.com/c8df661d1f.js"
       crossorigin="anonymous"
+      defer
     ></script>
   </body>
 </html>
