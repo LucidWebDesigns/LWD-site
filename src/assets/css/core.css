@@ -443,12 +443,12 @@ a {
     z-index: 11111111;
     top: 0%;
     height: 100vh;
-    transition: 0.5s;
+    transition: 0.5s linear;
     width: 100vw;
     position: absolute;
     left: 0;
     background: linear-gradient(
-      90deg,
+      270deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(1, 60, 132, 1) 100%,
       rgba(0, 157, 255, 1) 100%
@@ -484,14 +484,6 @@ a {
 
   .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
     transform: rotate(-45deg) translateY(-0.7rem);
-  }
-  @keyframes nav-li {
-    from {
-      opacity: 0%;
-    }
-    to {
-      opacity: 100%;
-    }
   }
   .page-header-title {
     font-size: 2.5em;
