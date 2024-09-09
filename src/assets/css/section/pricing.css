@@ -4,14 +4,18 @@
 /* test */
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+  #pricing strong {
+    color: var(--primary);
+    font-size: 1.15em;
+  }
   #add-ons ul {
-    margin: 0.9em auto;
+    margin: 0.75em 0.5em;
   }
   #essential ul {
-    margin: 0.5em auto;
+    margin: 0.5em;
   }
   .cs-item-popular ul {
-    margin: 1em;
+    margin: 1em 0.5em;
     gap: 2em;
   }
   .cs-price-details {
@@ -188,7 +192,11 @@
   }
 }
 /* Tablet - 768px */
-@media only screen and (min-width: 60rem) {
+@media only screen and (min-width: 62rem) {
+  #pricing .content {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
   #pricing .cs-container {
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
