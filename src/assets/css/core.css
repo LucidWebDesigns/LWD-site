@@ -992,7 +992,7 @@ iframe {
 .fade-in {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.777s ease-out, transform 0777s ease-out;
 }
 
 .fade-in-visible {
@@ -1004,7 +1004,7 @@ iframe {
 .slide-in-left {
   opacity: 0;
   transform: translateX(-100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.777s ease-out, transform 0.777s ease-out;
 }
 
 .slide-in-visible {
@@ -1016,7 +1016,7 @@ iframe {
 .slide-in-right {
   opacity: 0;
   transform: translateX(100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.777s ease-out, transform 0.777s ease-out;
 }
 
 .slide-in-visible {
